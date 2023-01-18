@@ -1,0 +1,178 @@
+<div class="d-none search-text" data-addtoDownload="${properties.addToDownloadLabel}"
+    data-readMore="${properties.readMoreLabel}" data-learnMore="${properties.learnMoreLabel}"
+    data-watchVideo="${properties.watchVideoLabel}" data-noresults="${properties.noResults}"
+    data-nodata="${properties.noData}"></div>
+
+<!--/* ************ Search box start *********** */-->
+<section class="search_results">
+    <div class="container-fluid">
+        <div class="row g-0">
+            <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+            <div class="col-md-10 col-12 col-lg-10 col-xl-8 col-xxl-6 justify-content-xl-center align-items-xl-center align-content-xl-center ps-xxl-3 pe-xxl-3">
+                <div class="row g-0 cmp-search-row">
+                    <div class="col-md-6 col-lg-6 results">${properties.resulttitle}</div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="clear_serach_button pb-md-5">
+                            <a class="clear_search text-decoration-none"
+                                onclick="clearFields()">${properties.clearSearchLabel}
+                                <span class="clear-search-close">
+                                    <img class="close-cross-icon ms-3"
+                                        src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/X.svg"
+                                        alt="${'close' @ i18n}">
+                            </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row g-0">
+                        <div class="col-md-12 col-lg-12 col-xl-12 cmp-search-inputbox-outer">
+                            <div class="input-group input-group-sm search_input">
+                                <span class="input-group-addon search_symbol searchClick">
+                                    <span class="input-group-addon searchResultClickButton searchClick result-click-analytics">
+                                        <img class="ms-4"
+                                            src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/search-icon.svg"
+                                            alt="${'searchicon' @ i18n}">
+                                    </span>
+                                    <img class="ms-4"
+                                        src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/search-line.svg"
+                                        alt="${'searchline' @ i18n}">
+                                </span>
+                                <input type="text" id="search_inputbox"
+                                    class="form-control search_input_box search_inputbox_results search-result" style="border: none;"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                                    placeholder="${properties.ghostText}" data-serachtype="Search-Global"
+                                    autocomplete="off">
+                                <div class="searchProduct-show col-12" id="pro-show">
+                                    <div class="searchresshow" id="proshow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+        </div>
+    </div>
+</section>
+<!--/* ************ Search box End *********** */-->
+
+<!--/* ************ Search Results start *********** */-->
+<div class="searchresult-component container-fluid cmp-product-listing-dramix " id="searchResultComponent"
+    data-sly-use.searchresults="com.myproject.aem.core.models.SearchResultsModel">
+    <div class="row g-0 filter-container">
+        <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+        <div class="col-md-10 col-12 col-lg-10 col-xl-8 col-xxl-6 ps-xxl-3 pe-xxl-3">
+            <div class="button no-btn-grey-filter aem-GridColumn aem-GridColumn--default--12">
+                <button data-bs-toggle="offcanvas" data-bs-target="#searchresRight" aria-controls="searchresRight"
+                    type="button" id="filter-button-id" class="btn cmp-button rounded-0 border-0">
+                    <img src="/content/dam/myproject/button-icons/Dark-Arrow.svg" alt="Button Icon"
+                        class="cmp-button__icon arrow-left">
+                    <span class="cmp-button__text">${properties.filterLabel}
+                    </span>
+                    <img src="/content/dam/myproject/button-icons/Dark-Arrow.svg" alt="Button Icon"
+                        class="cmp-button__icon arrow-right">
+                </button>
+                <div id="result-hidden-count" class="d-none" data-count="${properties.resultCountLabel}"></div>
+                <div class="searchresult-numbers py-2 d-flex align-items-center justify-content-center justify-content-sm-start justify-content-md-start"></div>
+            </div>
+
+            <div class="offcanvas offcanvas-end filter-offcanvas border-0 p-0" tabindex="-1" id="searchresRight">
+                <div class="offcanvas-header filter-offcanvas-header">
+                    <div class="offcanvas-header-text p-4">
+                        <div class="head-text-filters text-uppercase mb-4">${properties.filterPreHeading}</div>
+                        <div class="head-text-choose">${properties.filterTitle}</div>
+                    </div>
+                    <div class="close-filter-button position-absolute text-center" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><img class="filter-cross-icon m-4"
+                            src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/filter-icons/X.svg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="row filter-accrodion-row">
+                        <div class="accordion filter-accrodion" id="accordionFilter">
+                            <div class="accordion-item filter-accrodion-item border-0">
+                                <sly data-sly-list.filterItem="${searchresults.filters}">
+                                    <h2 class="accordion-header filter-accrodion-header"
+                                        id="heading${filterItemList.index}">
+                                        <button class="accordion-button shadow-none text-uppercase" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse${filterItemList.index}"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            ${filterItem.heading} </button>
+                                    </h2>
+                                    <div id="collapse${filterItemList.index}" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading${filterItemList.index}"
+                                        data-bs-parent="#accordionFilter">
+                                        <div class="accordion-body filter-accrodion-body">
+                                            <ul class="filter-list list-unstyled">
+                                                <div class="checkBox_list" data-sly-list.tag="${filterItem.tagData}">
+                                                    <ul class="list-group">
+                                                        <li class="filter-list-items">
+                                                            <div class="form-check filter-form-check">
+                                                                <input
+                                                                    class="form-check-input form-check-input-event rounded-0 shadow-none"
+                                                                    type="checkbox" value="${tag.path}"
+                                                                    id="flexCheckDefault-${filterItemList.index}${tagList.index}">
+                                                                <label class="form-check-label"
+                                                                    for="flexCheckDefault-${filterItemList.index}${tagList.index}">
+                                                                    ${tag.title}
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </sly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row filter-buttons-row position-absolute w-100 g-0">
+                        <div class="col-6 p-0">
+                            <div class="button white-btn-filter">
+                                <button type="button" id="clearSearchFilter" class="btn cmp-button rounded-0 w-100">
+                                    <img src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/filter-icons/cross.png"
+                                        alt="Button Icon" class="cmp-button__icon  arrow-left">
+                                    <span class="cmp-button__text ">${properties.clearButtonLabel}</span>
+                                    <img src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/filter-icons/cross.png"
+                                        alt="Button Icon" class="cmp-button__icon  arrow-right">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 p-0">
+                            <div class="button dark-blue-btn-filter">
+                                <button data-bs-toggle="offcanvas" data-bs-target="#searchresFilter"
+                                    aria-controls="searchresFilter" type="button" id="searchresFilter"
+                                    data-bs-dismiss="offcanvas"
+                                    class="btn cmp-button rounded-0 w-100" disabled>
+                                    <img src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/filter-icons/tick.png"
+                                        alt="Button Icon" class="cmp-button__icon  arrow-left">
+                                    <span class="cmp-button__text ">${properties.filterButtonLabel}</span>
+                                    <img src="/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/filter-icons/tick.png"
+                                        alt="Button Icon" class="cmp-button__icon  arrow-right">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+        <div class="col-md-10 col-12 col-lg-10 col-xl-8 col-xxl-6 ps-xxl-3 pe-xxl-3">
+            <div class="searchcards-page-row mt-5 d-flex flex-wrap"></div>
+        </div>
+        <div class="col-sm-1 d-none d-sm-block col-md-1 col-lg-1 col-xl-2 col-xxl-3"></div>
+    </div>
+    <div class="cmp-pagination-hide pagination-row row mt-5 pt-3">
+        <div class="pagination results-pagination listing-pagination">
+            <ul class="justify-content-center w-100 d-flex flex-wrap" id="pagination_bar">
+                <!--pages or li are comes from javascript -->
+            </ul>
+        </div>
+    </div>
+</div>

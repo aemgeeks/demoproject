@@ -1,0 +1,257 @@
+//== Color
+
+// Normal mode
+$color-black: #000000;
+$color-black-07: rgba(0, 0, 0, 0.7);
+$color-black-05: rgba(0, 0, 0, 0.5);
+$color-foreground: #202020;
+$color-background: #ececec;
+$color-link: #2020e0;
+$color-regal-blue: #0e3f6b;
+$color-picton-blue: #54b2e3;
+$bright-cerulean: #01ADEF;
+$color-white: #ffffff;
+$color-pink: pink;
+$color-red: #ff0000;
+$color-dark-blue: #0A344F;
+$color-pure-cyan: #00b5e8;
+$color-dark-gray: #706A66;
+$color-light-gray: #dadada;
+$color-faded-white: #babdc0;
+$color-faded-gray: #7f8a9a;
+$color-light-black: #4c4e53;
+$color-gray: #f7f7f7;
+$color-cloud-gray: #E6E6E6;
+$color-cloud-lightgray: #c4c4c4;
+$color-background-red: #FF602C;
+$color-background-violet: #3670a4;
+$color-sherpa-blue: #69A5BD;
+$color-dark-desaturated-blue: #0F516E;
+$blue-whale: #0A344F;
+$color-burly-wood: #DDB38D;
+$color-Very-dark-gray: #5f5f5f;
+$color-mallorca-blue: #106C8D;
+$color-sky-blue: #14ACE5;
+$color-silver: #c0c0c0;
+$color-transparent: #00000000;
+$color-orange-bg: rgb(254, 80, 0);
+$color-white-bg: rgb(255 255 255);
+$green-white: #EBE9E5;
+$color-dark-shade-gray: #303030;
+$color-lemon-green: #a8ba88;
+
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark: invert($color-link);
+
+// Font Family Type
+
+$font-family-Bekaert-regular: "Bekaert-Regular";
+$font-family-Bekaert-medium: "Bekaert-Medium";
+$font-family-Bekaert-bold: "Bekaert-Bold";
+$font-family-Bekaert-italic: "Bekaert-Italic";
+$font-family-Bekaert-medium-italic: "Bekaert-Medium-Italic";
+$font-family-Bekaert-bold-italic: "Bekaert-Bold-Italic";
+$font-family-Bekaert-heading-regular: "Bekaert-Heading-Regular";
+$font-family-Bekaert-heading-bold: "Bekaert-Heading-Bold";
+
+// Font Size
+$font-size-8: 8px;
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-17: 17px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-25: 25px;
+$font-size-26: 26px;
+$font-size-38: 38px;
+$font-size-36: 36px;
+$font-size-32: 32px;
+$font-size-40: 40px;
+$font-size-45: 45px;
+$font-size-48: 48px;
+$font-size-50: 50px;
+$font-size-54: 54px;
+$font-size-56: 56px;
+$font-size-60: 60px;
+$font-size-70: 70px;
+$font-size-80: 80px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-12-pt: 12pt;
+$font-size-2-5-em: 2.5em;
+$font-size-32-em: 3.2em;
+
+// Font Weight
+$font-weight-normal: normal;
+$font-weight-italic: italic;
+$font-weight-bold: bold;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-700: 700;
+
+// Line Height
+$line-height-12: 12px;
+$line-height-14: 14px;
+$line-height-16: 16px;
+$line-height-17: 17px;
+$line-height-18: 18px;
+$line-height-20: 20px;
+$line-height-21: 21px;
+$line-height-21-99: 21.99px;
+$line-height-23-46: 23.46px; 
+$line-height-24: 24px;
+$line-height-28: 28px;
+$line-height-30: 30px;
+$line-height-32: 32px;
+$line-height-35: 35px;
+$line-height-36: 36px;
+$line-height-40: 40px;
+$line-height-45: 45px;
+$line-height-46: 46px;
+$line-height-50: 50px;
+$line-height-51: 51px;
+$line-height-44: 44px;
+$line-height-81: 81px;
+$line-height-84: 84px;
+$line-height-90: 90px;
+$line-height-146: 146.6%;
+$line-height-55: 55px;
+$line-height-60: 60px;
+$line-height-65: 65px;
+$line-height-70: 70px;
+
+// Letter Spacing
+$letter-spacing-02: -0.02em;
+$letter-spacing-2: 0.2em;
+
+// Image Path
+$image-path: "/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/";
+
+//Responsive view
+//small mobile
+$screen-xs-min: 320px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-a-min: 360px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-b-min: 361px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-c-min: 380px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-d-min: 381px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-e-min: 400px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-f-min: 401px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-g-min: 440px;
+// Small tablets and large smartphones (landscape view)
+$screen-xs-h-min: 441px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 639px;
+// Small tablets and large smartphones (landscape view)
+$screen-lm-min: 640px;
+// Small tablets (portrait view)
+$screen-lm-l-min:670px;
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Tablets and small desktops
+$screen-lg-l-min: 1199px;
+$screen-lg-la-min: 1150px;
+// Tablets and small desktops
+$screen-lg-m-min: 1024px;
+// Tablets and small desktops
+$screen-lg-x-min: 1023px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// Large tablets and desktops
+$screen-xl-m-min: 1201px;
+$screen-xl-ma-min: 1279px;
+$screen-xl-l-min: 1280px;
+$screen-xl-lla-min: 1281px;
+$screen-xl-ld-min: 1299px;
+$screen-xl-lc-min: 1300px;
+$screen-xl-lb-min: 1321px;
+$screen-xl-ll-min: 1340px;
+$screen-xl-la-min: 1373px;
+$screen-xl-laa-min: 1374px;
+// Large Screen
+$screen-xll-th-min: 1399px;
+$screen-xll-min: 1400px;
+$screen-xll-typo-min: 1440px;
+$screen-xll-a-a-min: 1500px;
+$screen-xll-a-b-min: 1501px;
+$screen-xll-a-min: 1549px;
+$screen-xll-b-min: 1550px;
+$screen-xll-b-lk-min: 1599px;
+$screen-xll-b-l-min: 1600px;
+$screen-xll-b-ll-min: 1601px;
+$screen-xll-b-lll-min: 1641px;
+$screen-xll-b-f-min: 1700px;
+$screen-xll-bc-min: 1919px;
+$screen-xll-c-min: 1920px;
+$screen-xll-d-min: 1921px;
+$screen-xll-e-min: 1800px;
+$screen-xll-el-min: 1801px;
+$screen-xll-elm-min: 1899px;
+$screen-xll-eln-min: 1900px;
+$screen-xll-elo-min: 1999px;
+$screen-xll-t-min: 2000px;
+$screen-xll-tl-min: 2001px;
+$screen-xll-tt-min: 2200px;
+$screen-xll-ttl-min: 2201px;
+$screen-xll-ttz-min: 2100px;
+$screen-xll-ttx-min: 2299px;
+$screen-xll-ttx-min: 2300px;
+$screen-xll-ttc-min: 2301px;
+$screen-xll-ttv-min: 2399px;
+$screen-xll-ttb-min: 2400px;
+$screen-xll-ttn-min: 2401px;
+$screen-xll-ttm-min: 2499px;
+$screen-xll-ttll-min: 2500px;
+$screen-xll-ttlk-min: 2501px;
+$screen-xll-ttlj-min: 2599px;
+$screen-xll-ttlh-min: 2600px;
+$screen-xll-ttlg-min: 2700px;
+$screen-xll-ttlf-min: 2701px;
+$screen-xll-ttld-min: 2800px;
+$screen-xll-ttla-min: 2801px;
+$screen-xll-ttls-min: 2900px;
+$screen-xll-ttlp-min: 2901px;
+$screen-xll-ttlo-min: 3000px;
+
+
+// safari browser
+$screen-safari: .001dpcm;
+
+// Font Style
+$font-style-normal: normal;
+
+// Buttons border
+$color-dark-blue-II: rgba(4, 42, 75, 0.2);
+$color-regal-blue-II: rgba(14, 63, 107, 0.2);
+$color-white-II: rgba(255, 255, 255, 0.2);
+$color-grey-II: rgba(111, 111, 111, 0.2);
+
+//Header Line
+$color-light-white: rgb(255 255 255 / 96%);
+$color-light-blue: hsl(208deg 90% 15% / 20%);
+$color-light-white-transparent: hsla(0, 0%, 100%, 0.2);
+$color-very-light-grey: rgb(175 185 192 / 10%);
+
+//z-index property
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-offcanvas: 1050;
+$zindex-modal: 1060;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;

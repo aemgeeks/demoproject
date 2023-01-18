@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.myproject.aem.core.services.impl.SendMailServiceImpl">
+  <property name="service.id" type="String" value=" Send Email Service"/>
+  <property name="service.description" type="String" value="This services is used to send the Email Notification to the Users/Business"/>
+  <service>
+    <provide interface="com.myproject.aem.core.services.SendMailService"/>
+  </service>
+  <implementation class="com.myproject.aem.core.services.impl.SendMailServiceImpl"/>
+</scr:component>

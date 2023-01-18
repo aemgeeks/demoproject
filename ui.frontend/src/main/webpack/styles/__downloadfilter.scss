@@ -1,0 +1,258 @@
+
+    .download-filter-offcanvas.offcanvas.offcanvas-end {
+        width: 500px;
+        z-index: 1000000;
+        .filter-offcanvas-header {
+            background: $color-dark-blue;
+
+            .offcanvas-header-text {
+                color: $color-white;
+                font-family: $font-family-Bekaert-regular;
+
+                .head-text-filters {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-10;
+                    line-height: $line-height-12;
+                }
+
+                .head-text-choose {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-30;
+                    line-height: $line-height-36;
+                    letter-spacing: $letter-spacing-02;
+                }
+            }
+
+            .close-filter-button {
+                border: 1px solid $color-white-II;
+                cursor: pointer;
+                top: 0;
+                right: 0;
+
+                &:hover {
+                    transition: 0.5s;
+                    border: 1px solid $color-white;
+
+                    .filter-cross-icon {
+                        transition: 0.5s;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+
+        }
+
+        .offcanvas-body {
+            
+            .dowload-listing-row {
+                ul {
+                    li {
+                        .product-divs {
+                            height: auto;
+                            border: 1px solid $color-regal-blue-II;
+                            display: flex;
+                            position: relative;
+
+                            .img-div-download {
+                                position: relative;
+                                .thumbnail-image{
+                                    width: 128px;
+                                    height: 100%;
+                                    @media (max-width: $screen-md-min) {
+                                        display: none;
+                                    }
+                                }
+                                .image-small-icon{
+                                    background-color: $color-dark-blue;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 50px;
+                                    height: 50px;
+                                    @media (max-width: $screen-md-min) {
+                                        top: 0;
+                                    }
+                                }
+                            }
+                            .trash-icon-div{
+                               cursor: pointer;
+                                border-left: 1px solid $color-regal-blue-II;
+                                border-bottom: 1px solid $color-regal-blue-II;
+
+                                position: absolute;
+                                right: 0;
+                                padding: 18px;
+                            }
+
+                            .text-download-head {
+                                font-family: $font-family-Bekaert-heading-regular;
+                                width: 80%;
+                                font-weight: $font-weight-400;
+                                font-size: $font-size-10;
+                                line-height: $line-height-12;
+                                text-transform: uppercase;
+                                padding: 10px 0 10px 10px;
+                                color: $color-dark-blue;
+                                @media (max-width: $screen-md-min) {
+                                    padding-left: 50px;
+                                }
+                            }
+                            .text-download-text{
+                                font-family: $font-family-Bekaert-regular;
+                                font-weight: $font-weight-400;
+                                font-size: $font-size-15;
+                                line-height: $line-height-18;
+                                padding: 0 60px 0 10px;
+                                color: $color-dark-blue;
+                                @media (max-width: $screen-md-min) {
+                                    padding-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .filter-buttons-row {
+                bottom: 0;
+                z-index: 3;
+                margin: 0;
+                right: 0;
+                left: 0;
+
+                // White button for clear all with cross
+                .white-btn-filter {
+                    .btn {
+                        border: 1px solid $color-regal-blue-II;
+                        background-color: $color-white;
+                        width: auto;
+                        min-height: 49px;
+
+                        .cmp-button__text {
+                            font-family: $font-family-Bekaert-bold;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-15;
+                            line-height: $line-height-18;
+                            color: $color-regal-blue;
+                            margin: auto;
+                        }
+
+                        .arrow-left {
+                            display: none;
+                        }
+
+                        .arrow-right {
+                            margin: auto;
+                        }
+
+                        &:hover {
+                            border: 1px solid $color-regal-blue;
+                            transition: 1s;
+
+                            .cmp-button__text {
+                                opacity: 0.7;
+                                transition: 1s;
+                            }
+
+                            .arrow-right {
+                                opacity: 0.7;
+                                transition: 1s;
+
+                            }
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+
+
+
+
+                }
+
+                // Blue button for filter with tick icon
+                .dark-blue-btn-filter {
+
+                    .btn {
+                        border: 1px solid $color-regal-blue;
+                        background: $color-regal-blue;
+                        width: auto;
+                        min-height: 49px;
+
+                        .cmp-button__text {
+                            font-family: $font-family-Bekaert-bold;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-16;
+                            line-height: $line-height-17;
+                            color: $color-white;
+                            margin: auto;
+                        }
+
+                        .arrow-left {
+                            display: none;
+                        }
+
+                        .arrow-right {
+                            margin: auto;
+                        }
+
+                        &:hover {
+                            border: 1px solid $color-white;
+                            transition: 1s;
+
+                            .cmp-button__text {
+                                opacity: 0.7;
+                                transition: 1s;
+                            }
+
+                            .arrow-right {
+                                opacity: 0.7;
+                                transition: 1s;
+
+                            }
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                        
+                    }
+
+
+
+                }
+            }
+          
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          /* Track */
+          
+           
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: $color-picton-blue; 
+            border-radius: 10px;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: $color-picton-blue; 
+          }
+    }
+    
+// button disable
+.download-filter-offcanvas{
+    .dark-blue-btn-filter{
+        &.anchor_tag_download{
+            pointer-events: none;
+        }
+    }
+}
+

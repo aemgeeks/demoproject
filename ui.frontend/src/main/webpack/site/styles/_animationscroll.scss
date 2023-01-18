@@ -1,0 +1,446 @@
+.solutioncomponent,
+.project-dramix-container,
+.sticky-teaser-container,
+.talktoexpert,
+footer {
+    position: relative;
+    z-index: 5;
+}
+
+.solutioncomponent {
+    padding-top: 85px;
+}
+
+.solutioncomponent,
+.project-dramix-container,
+.talktoexpert,
+footer {
+    background-color: $color-white;
+}
+
+.canvas_content {
+    position: relative;
+    height: 100%;
+
+    .canvas {
+        width: calc(100vw - (100vw - 100%));
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s;
+
+        canvas {
+            position: absolute;
+            width: calc(100vw - (100vw - 100%));
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .dark-btn-grey {
+        .cmp-button-animation {
+            width: fit-content;
+            height: 49px;
+
+            @media (max-width: $screen-md-min) {
+                border: none;
+                align-items: center;
+                gap: 10px;
+
+                .arrow-left {
+                    display: none;
+                }
+
+                .cmp-button__text {
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+
+    .textcountheading {
+        color: $blue-whale;
+        font-family: $font-family-Bekaert-heading-bold;
+        font-weight: $font-weight-700;
+        font-size: $font-size-30;
+
+        @media (max-width: $screen-md-min) {
+            font-size: $font-size-20;
+        }
+    }
+
+    .textcountdescription {
+        color: $color-black;
+        font-size: $font-size-15;
+        font-weight: $font-weight-400;
+        font-style: $font-weight-normal;
+    }
+
+    .textcountvalue {
+        color: $bright-cerulean;
+        font-size: $font-size-15;
+        font-weight: $font-weight-400;
+        font-style: $font-weight-normal;
+        letter-spacing: $letter-spacing-2;
+        line-height: $line-height-18;
+        font-family: $font-family-Bekaert-heading-regular;
+
+        @media (max-width: $screen-md-min) {
+            font-size: $font-size-12;
+        }
+    }
+}
+
+.textFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+
+    p {
+        font-weight: lighter;
+    }
+}
+
+.textContentWrap1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    height: 100%;
+}
+
+.textContent1 {
+    width: 500px;
+    text-align: center;
+
+    div {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0s;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 1s;
+        }
+
+        &.inactive {
+            animation-name: textTransform;
+            animation-duration: 1s;
+        }
+    }
+
+    p {
+        margin-top: 30px;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0s;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 1s;
+        }
+
+        &.inactive {
+            animation-name: textTransform;
+            animation-duration: 1s;
+        }
+    }
+}
+
+@keyframes textTransform {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    95% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes goDownAnimation {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        top: 130%;
+    }
+
+    51% {
+        top: 0%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+.textContentWrap2,
+.textContentWrap3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.textContent2,
+.textContent3,
+.textContent4 {
+    width: 500px;
+    text-align: left;
+}
+
+.textContent2>*,
+.textContent3>*,
+.textContent4>* {
+    margin-top: 20px;
+}
+
+.textContentWrap4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .textContentWrap2,
+    .textContentWrap3,
+    .textContentWrap4 {
+        margin-top: 0;
+        justify-content: flex-start;
+        left: 0;
+        right: 0;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+
+    .textContent2,
+    .textContent3,
+    .textContent4 {
+        width: 300px;
+    }
+
+    .textContentWrap2,
+    .textContentWrap3 {
+        left: 75px;
+    }
+
+    .textContentWrap4 {
+        right: 75px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage-animation>* {
+        line-height: 1.2;
+    }
+
+    .textFrame {
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+    .textContent2,
+    .textContent3,
+    .textContent4 {
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .textContent1 {
+        width: 90%;
+    }
+
+    .textContent2,
+    .textContent3,
+    .textContent4 {
+        width: 300px;
+    }
+
+    .textContentWrap2,
+    .textContentWrap3 {
+        left: 0px;
+    }
+
+    .textContentWrap4 {
+        right: 0px;
+    }
+}
+
+#svg {
+    transform: rotateY(180deg);
+
+    circle {
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 1s linear;
+        stroke: $bright-cerulean;
+        stroke-width: 1em;
+    }
+
+    #bar {
+        stroke: $bright-cerulean;
+    }
+}
+
+.progress_wrap {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    transform: scale(0);
+    transition: all 0.3s linear;
+    z-index: 2000;
+
+    @media (max-width: $screen-md-min) {
+        z-index: 1;
+    }
+}
+
+.progress_wrap_show {
+    transform: scale(1);
+}
+
+.progress-wrapper {
+    height: 60px;
+    width: 60px;
+
+    @media (max-width: $screen-md-min) {
+        height: 36px;
+        width: 36px;
+    }
+}
+
+.progress-circle {
+    transform: rotate(0deg);
+}
+
+.progress-circle-back {
+    fill: $color-white;
+    stroke-width: 5px;
+}
+
+.progress-circle-prog {
+    fill: none;
+    stroke: $bright-cerulean;
+    stroke-width: 5px;
+    stroke-dasharray: 0 999;
+    stroke-dashoffset: 0px;
+    transition: stroke-dasharray 0.2s linear 0s;
+}
+
+.progress-text {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    text-align: center;
+    font-size: $font-size-25;
+    font-weight: $font-weight-700;
+    letter-spacing: $letter-spacing-2;
+    line-height: $line-height-30;
+    font-family: $font-family-Bekaert-heading-regular;
+
+    @media (max-width: $screen-md-min) {
+        font-size: $font-size-12;
+        left: 0;
+    }
+}
+
+.go_down {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: $blue-whale;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+
+    .go_down_button {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .go_down_button_text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -7px;
+        margin-top: -5.5px;
+
+        path {
+            stroke: $color-white;
+            fill: transparent;
+            stroke-width: 3px;
+        }
+
+        &.animate {
+            animation-name: goDownAnimation;
+            animation-duration: 0.5s;
+        }
+    }
+}
+
+@media (max-height: 700px) {
+    @media (max-width: $screen-md-min) {
+        .canvas_content {
+            .textcountdescription {
+                font-size: 12px;
+            }
+        }
+
+        .textContent4>* {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-height: 600px) {
+    @media (max-width: $screen-md-min) {
+        .canvas_content {
+            .textcountdescription {
+                font-size: 9px;
+            }
+        }
+    }
+}

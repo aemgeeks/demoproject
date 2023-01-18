@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: My Project - All
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.myproject.aem:myproject-aem-project.all:0.0.1-SN
+ APSHOT
+Content-Package-Description: All content package for My Project
+Content-Package-Roots: /apps/myproject-packages,/apps/myproject-vendor-p
+ ackages
+

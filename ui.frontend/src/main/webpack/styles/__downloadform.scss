@@ -1,0 +1,300 @@
+.download-form-container {
+    background-color: $color-gray;
+
+    .form-page-wrapper {
+
+        @media (max-width: $screen-md-min) {
+            padding: 18px;
+        }
+
+
+        .form-heading-row {
+            .download-header-div {
+                .head-text-download {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    color: $color-pure-cyan;
+                    font-size: $font-size-10;
+                    font-weight: $font-weight-400;
+                    letter-spacing: $letter-spacing-2;
+                    line-height: $line-height-12;
+                }
+
+                .cmp-download-title {
+                    font-family: $font-family-Bekaert-heading-bold;
+                    color: $color-dark-blue;
+                    font-size: $font-size-70;
+                    font-weight: $font-weight-700;
+                    letter-spacing: $letter-spacing-02;
+                    line-height: $line-height-90;
+                    @media (max-width: $screen-md-min) {
+                        font-size: $font-size-36;
+                        line-height: $line-height-51;
+                    }
+                }
+
+                .download-heading-desc {
+                    font-family: $font-family-Bekaert-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-15;
+                    line-height: $line-height-146;
+                    color: $color-dark-gray;
+                }
+            }
+        }
+
+        .form-details-row {
+            .form-details-header {
+                .form-details-header-title {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-30;
+                    line-height: $line-height-36;
+                    letter-spacing: $letter-spacing-02;
+                    color: $color-dark-blue;
+                }
+
+                .form-details-mandatory {
+                    font-family: $font-family-Bekaert-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-12;
+                    line-height: $line-height-14;
+                    color: $color-dark-blue;
+                }
+            }
+
+            .form-details-body {
+                @media (min-width: $screen-md-min) {
+                    width: 80%
+                }
+                .form-input-col{
+                    height: 6em;
+                }
+                .download-form-select {
+                   
+            
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                .labels-form-div {
+                    max-width: 415px;
+                    @media (max-width: $screen-md-min) {
+                        width: 100%;
+                    }
+
+                    .form-name-head {
+                        font-family: $font-family-Bekaert-heading-regular;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-10;
+                        line-height: $line-height-12;
+                        color: $color-dark-blue;
+                    }
+
+                    .form-name-example {
+                        font-family: $font-family-Bekaert-regular;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-12;
+                        color: $color-dark-gray;
+                        line-height: $line-height-12;
+                    }
+
+
+                }
+
+                .form-check-text {
+                    font-family: $font-family-Bekaert-regular;                 
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-15;
+                    line-height: $line-height-146;
+                    color: $color-dark-gray;
+
+                }
+
+                .download-form-check {
+                    background-color: $color-light-gray;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                .invalid-feedback-text {
+                    font-family: $font-family-Bekaert-regular;
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-12;
+                    line-height: $line-height-146;
+                    color: $color-red;
+                    max-width: 415px;
+                    text-align: right;
+                }
+
+                .was-validated {
+                    &:invalid {
+                        ~.invalid-feedback {
+                            display: flex;
+                            color: $color-pink;
+                        }
+                    }
+
+                }
+
+                .was-validated {
+                    .form-control {
+                        &:valid {
+                            background-image: url(#{$image-path}/Vector.svg);
+                            background-size: 12px;
+
+                        }
+
+                        &:invalid {
+                            background-image: url(#{$image-path}/Group.svg);
+                            background-size: 9.9px;
+                        }
+                    }
+                    .form-select{
+                        &:valid{
+                            background-image: url(#{$image-path}/dropdwn-arrow.svg),url(#{$image-path}/Vector.svg),;
+                            background-size: 12px;
+                        }
+                        &:invalid{
+                            background-image: url(#{$image-path}/dropdwn-arrow.svg),url(#{$image-path}/Group.svg);
+                            background-size: 9.9px;
+                        }
+                    }
+                }
+
+
+
+                .download-form-control {
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+
+                .form-seperation-line {
+                    color: $color-dark-gray;
+                    margin: 35px 0 35px 0;
+                }
+
+                .dark-btn-dwn {
+                    .btn {
+                        border: 1px solid $color-regal-blue-II;
+                        display: flex;
+                        max-width: 157px;
+                        padding: 0;
+                        min-height: 49px;
+
+
+
+
+                        .cmp-button__text {
+                            font-family: $font-family-Bekaert-bold;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-15;
+                            line-height: $line-height-17;
+                            color: $color-dark-blue;
+                            margin: auto 20px;
+                        }
+
+                        .download-button-icon {
+                            margin: auto 20px auto 0;
+                        }
+                        .arrow-cont{
+                            margin: auto 1.5em auto 0;
+                            display: flex;
+                            position: relative;
+                            img{
+                                width: 12px;
+                            }
+                            &:after{
+                                content:url(#{$image-path}/button-icons/arrow_blue.svg);
+                                transform: scale(0.12);
+                                position: absolute;
+                                right: 68.7%;
+                                top: -2px;
+                                width: 1px;
+                                height: 1px;
+                            
+                            }
+                        }
+                    }
+
+                    .btn {
+                        &:hover {
+                            border: 1px solid $color-regal-blue;
+                            .arrow-cont{
+                                &:after{
+                                    animation-name: arrowdwn;
+                                    animation-duration: 1s;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn {
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .form-check-input {
+                border-color: $color-light-gray;
+                background-color: $color-light-gray;
+                cursor: pointer;
+                &:checked{
+                    background-color: $color-dark-blue;
+                    background-image: url(#{$image-path}/filter-icons/square-checkbox.png);
+                    background-size: 30%;
+                }
+            }
+        }
+    }
+
+    .download-form-control {
+        border-radius: 0;
+        max-width: 415px;
+        height: 50px;
+        border-color: $color-white;
+        @media (max-width: $screen-md-min) {
+            width: 100%;
+        }
+    }
+    .download-form-select {
+        max-width: 415px;
+        height: 50px;
+        border-radius: 0;
+        border-color: $color-white;
+        color: $color-dark-gray;
+
+    }
+   
+}
+
+@keyframes arrowdwn {
+    0% {
+        top: 2px;
+    }
+
+    25% {
+        top: 7px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 2px;
+        opacity: 0;
+    }
+
+    75% {
+        top: -8px;
+        opacity: 0;
+    }
+
+    100% {
+        top: -3px;
+        opacity: 1;
+    }
+}

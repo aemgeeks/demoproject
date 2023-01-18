@@ -1,0 +1,40 @@
+<sly  data-sly-use.teasercards="com.myproject.aem.core.models.TeaserCard"
+	 data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+<div class="container-fluid card-wrapper ${teasercards.list.size==1 ? 'one-treaser' : ''}">
+	<div class="cmp-big">
+		<div class="cmp-columncontrol container-fluid my-3">
+			<div class="row">
+				<div class="col-md-${properties.columns} col-sm-12" data-sly-repeat="${teasercards.list}">
+					<sly
+						data-sly-resource="${itemList.count @ resourceType='myproject/components/teaser', decoration=true}">
+					</sly>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cmp-small">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="teaserCards" class="carousel slide"  data-bs-touch="true" data-bs-ride="carousel" data-bs-pause="hover">
+					<div class="carousel-inner" data-sly-list="${teasercards.list}">
+						<div class="carousel-item ${itemList.first ? 'active' : '' }">
+							<div class="col-11 me-3">
+								<sly
+									data-sly-resource="${itemList.count @ resourceType='myproject/components/teaser', decoration=true}">
+								</sly>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-indicators" data-sly-list="${teasercards.list}">
+						<button type="button" data-bs-target="#teaserCards" data-bs-slide-to="${itemList.index}"
+							class="${itemList.first ? 'active' : '' }"
+							aria-current="${itemList.first ? 'true' : 'false'}"
+							aria-label="Slide ${itemList.count}"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !teasercards.list}"></sly>

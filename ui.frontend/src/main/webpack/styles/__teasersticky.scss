@@ -1,0 +1,161 @@
+/*-------------------------------------------------*\
+   General style sheet for the Sticky Teaser Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Sticky Teaser Container
+   - Sticky Teaser
+   - Teaser Design
+
+   
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+   Sticky Teaser Container
+\*-------------------------------------------*/
+.sticky-teaser-container {
+    background-color: $color-dark-blue;
+    margin-top: 8em;
+    @media (max-width: $screen-md-min) {
+        margin-top: 0
+    }
+    .cmp-columncontrol {
+        .column-1{
+            @media (max-width: $screen-md-min) {
+                top: -5em;
+                position: relative;
+            }
+            
+        }
+
+/*-------------------------------------------*\
+   Sticky Teaser
+\*-------------------------------------------*/
+        .column-inner {
+            top: -15%;
+            position: relative;
+            height: 100%;
+
+            @media (max-width: $screen-md-min) {
+                margin-top: -3em;
+                height: auto;
+                top: -10%;
+            }
+
+            .column-wrapper {
+                height: 100%;
+
+                .cmp-container {
+                    height: 100%;
+
+/*-------------------------------------------*\
+   Teaser Design
+\*-------------------------------------------*/
+                    .teaser {
+                        height: 100%;
+
+                        .cmp-teaser {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            &__title {
+                                width: 50%;
+                                margin: 0 auto;
+                                font-weight: $font-weight-400;
+                                font-family: $font-family-Bekaert-heading-regular;
+                                font-size: $font-size-30;
+                                line-height: $line-height-36;
+                                letter-spacing: $letter-spacing-02;
+                                @media (max-width: $screen-lg-min) {
+                                    width: 100%;
+                                    font-size: $font-size-20;
+                                    line-height: $line-height-24;
+                                }
+                            }
+
+                            &__content {
+                                flex: 1;
+                                width: 100%;
+                                display: inline-flex;
+                                flex-direction: column;
+                                margin: 0 auto;
+                                padding: 3.75em;
+                                background-color: $color-white;
+
+                                .button {
+                                    &.dark-btn-grey {
+                                        width: 50%;
+                                        margin: auto;
+
+                                        @media (max-width: $screen-lg-min) {
+                                            width: 100%;
+                                        }
+
+                                        .cmp-button {
+                                            width: 173px;
+
+                                            .cmp-button__text {
+                                                margin: auto 25px auto 20px;
+                                            }
+                                        }
+                                        @media not all and (min-resolution:$screen-safari)
+                                        { @supports (-webkit-appearance:none) {
+                                            .cmp-button { 
+                                                -webkit-appearance: none;
+                                                -moz-appearance: none;
+                                                appearance: none;
+                                                width: 180px;
+                                                display: inline-flex;
+                                            }
+                                        }}
+                                    }
+                                }
+                            }
+
+                            &__title-link {
+                                text-decoration: none;
+                                color: $color-dark-blue;
+                                font-weight: $font-weight-400;
+                                font-size: $font-size-30;
+                                line-height: $line-height-36;
+                                letter-spacing: $letter-spacing-02;
+                                margin: 0;
+                            }
+
+                            &__description {
+                                width: 50%;
+                                margin: 0 auto;
+                                flex: 1;
+
+                                @media (max-width: $screen-lg-min) {
+                                    width: 100%;
+                                }
+
+                                p {
+                                    font-weight: $font-weight-400;
+                                    font-size: $font-size-15;
+                                    line-height: $line-height-146;
+                                    color: $color-dark-gray;
+                                    margin: 20px 0;
+                                }
+                            }
+
+                            &__action-container {
+                                width: 50%;
+                                margin: auto;
+
+                                @media (max-width: $screen-lg-min) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

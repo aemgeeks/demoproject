@@ -1,0 +1,409 @@
+/*-------------------------------------------------*\
+   General style sheet for the Solution Component of Home page
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Title text of soltuion component. 
+   - Left Side Challenges cards.
+   - Image Div with softwares text 
+   - Right Side text cards.
+   - Accordion for mobile responsive. 
+   
+\*-------------------------------------------------*/
+
+.container-dramix {
+  @media(min-width: $screen-lg-m-min) {
+    &.container-fluid {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  .solution-row {
+    .cmp-card-col {
+      background-color: $color-dark-blue;
+    }
+
+    .grey-background {
+      background: $color-gray;
+    }
+
+    /*-------------------------------------------*\
+        Title text of soltuion component. 
+  \*-------------------------------------------*/
+    .cmp-left {
+
+      // 1400px
+      @media(min-width: $screen-xll-min) {
+        width: 100%;
+        max-width: 500pt;
+        margin-left: auto;
+      }
+
+      // 1200px and 1399px
+      @media(min-width: $screen-xl-min) and (max-width: $screen-xll-th-min) {
+        width: 100%;
+        max-width: 427.5pt;
+        margin-left: auto;
+      }
+
+      //1024px and 1199px
+      @media(min-width: $screen-lg-m-min) and (max-width: $screen-lg-l-min) {
+        width: 100%;
+        max-width: 30pc;
+        margin-left: auto;
+      }
+
+      .head-text-solutions {
+        font-family: $font-family-Bekaert-heading-regular;
+        font-weight: $font-weight-400;
+        font-size: $font-size-10;
+        line-height: $line-height-12;
+        letter-spacing: $letter-spacing-2;
+        color: $color-pure-cyan;
+        padding-bottom: 30px;
+        padding-top: 1em;
+
+        @media (max-width: $screen-md-min) {
+          padding: 10px 0 0 10px;
+        }
+      }
+
+      .solution-div {
+        @media (max-width: $screen-md-min) {
+          margin: 30px 10px;
+        }
+
+        .cmp-solution-title {
+          font-family: $font-family-Bekaert-heading-bold;
+          font-weight: $font-weight-700;
+          font-size: $font-size-70;
+          line-height: $line-height-90;
+          letter-spacing: $letter-spacing-02;
+          color: $color-dark-blue;
+
+          @media (max-width: $screen-md-min) {
+            font-size: $font-size-36;
+            line-height: $line-height-55;
+            padding: 10px;
+            width: 100%;
+          }
+          @media(min-width: $screen-md-min) and (max-width: $screen-xll-typo-min) {
+            font-size: $font-size-56;
+            line-height: $line-height-65;
+          }
+        }
+      }
+    }
+
+    /*-------------------------------------------*\
+        Left Side Challenges cards.
+  \*-------------------------------------------*/
+    .challenge-card-link {
+      cursor: pointer;
+      top: -10%;
+
+      @media (min-width: $screen-lg-min) and (max-width: $screen-lg-l-min) {
+        top: -5px;
+      }
+
+
+      .challenges-card {
+        opacity: 0.5;
+        background-color: $color-white;
+        width: 100%;
+        margin-bottom: 1px;
+
+
+        .challenge-head {
+          font-family: $font-family-Bekaert-heading-regular;
+          font-weight: $font-weight-400;
+          font-size: $font-size-10;
+          line-height: $line-height-12;
+          letter-spacing: $letter-spacing-2;
+          color: $color-dark-blue;
+        }
+
+        .challenge-text {
+          font-family: $font-family-Bekaert-bold;
+          font-weight: $font-weight-700;
+          font-size: $font-size-20;
+          line-height: $line-height-32;
+          color: $color-dark-blue;
+        }
+      }
+
+      .challenges-card {
+        &.active {
+          opacity: 1;
+        }
+
+      }
+    }
+
+    /*-------------------------------------------*\
+        Image Div with softwares text 
+  \*-------------------------------------------*/
+
+    .image-bg-div {
+      position: relative;
+      background-size: cover;
+      background-position: 50%;
+      height: 550px;
+      padding: 3em 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-attachment: fixed;
+      background-position: 50% 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, $color-black, $color-black);
+        opacity: .6;
+      }
+
+      @media (max-width: $screen-md-min) {
+        height: 100%;
+        padding: 4em 1.5em;
+      }
+      @media(min-width: $screen-md-min) and (max-width: $screen-xll-typo-min) {
+        height: 450px;
+      }
+
+      .stairs-img-text {
+        top: 5%;
+        width: 70%;
+        margin-left: 3rem;
+
+        @media(max-width:$screen-md-min) {
+          width: 100%;
+          top: 0;
+          margin-left: 0;
+        }
+
+        .head-text-softwares {
+          font-family: $font-family-Bekaert-heading-regular;
+          font-weight: $font-weight-400;
+          font-size: $font-size-10;
+          line-height: $line-height-12;
+          letter-spacing: $letter-spacing-2;
+          color: $color-white;
+        }
+
+        .stairs-text-content-link {
+          .stairs-text-content {
+            font-weight: $font-weight-400;
+            font-family: $font-family-Bekaert-regular;
+            font-size: $font-size-20;
+            line-height: $line-height-32;
+            width: 70%;
+            color: $color-white;
+
+            // 1024px
+            @media(min-width: $screen-lg-m-min) {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 220px auto;
+              align-items: center;
+              grid-gap: 1em;
+            }
+
+            .arrow-stairs {
+              right: 5%;
+              position: absolute;
+
+              // 1024px
+              @media(min-width: $screen-lg-m-min) {
+                right: 0;
+                position: static;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*-------------------------------------------*\
+        Right Side text cards.
+  \*-------------------------------------------*/
+    .cmp-card-cont {
+      background-color: $color-white;
+      max-width: 100%;
+      top: -10%;
+
+      @media (min-width:$screen-lg-m-min) {
+        overflow: hidden;
+      }
+
+      @media (min-width: $screen-lg-min) and (max-width: $screen-lg-l-min) {
+        top: -5px;
+      }
+
+      .cmp-card-wrapper {
+        .cmp-card-inner {
+          max-width: 50%;
+          margin: 0 auto;
+
+          // 1024px and 1599px
+          @media (min-width: $screen-lg-m-min) and (max-width: $screen-xll-b-lk-min) {
+            max-width: 60%;
+          }
+
+          // 1600px and 1800px
+          @media (min-width: $screen-xll-b-l-min) and (max-width: $screen-xll-e-min) {
+            max-width: 55%;
+          }
+
+          // 1801px and 2000px
+          @media (min-width: $screen-xll-el-min) and (max-width: $screen-xll-t-min) {
+            max-width: 50%;
+          }
+
+          // 2001px and 2200px
+          @media (min-width: $screen-xll-tl-min) and (max-width: $screen-xll-tt-min) {
+            max-width: 45%;
+          }
+
+          // 2201px
+          @media (min-width: $screen-xll-ttl-min) {
+            max-width: 40%;
+          }
+
+          h4 {
+            font-family: $font-family-Bekaert-heading-regular;
+            color: $color-dark-blue;
+            font-weight: $font-weight-400;
+            font-size: $font-size-30;
+            line-height: $line-height-40;
+            letter-spacing: $letter-spacing-02;
+          }
+
+          p {
+            font-weight: $font-weight-400;
+            font-size: $font-size-15;
+            line-height: 146.6%;
+            color: $color-dark-gray;
+            margin: 20px 0;
+          }
+
+          .cmp-box-button {
+            .dark-btn-grey {
+              .cmp-button {
+                width: 148px;
+
+                .cmp-button__text {
+                  font-family: $font-family-Bekaert-bold;
+                  font-weight: $font-weight-700;
+                  font-size: $font-size-15;
+                  line-height: $line-height-17;
+                  margin: auto 20px auto 15px;
+                }
+              }
+
+              @media not all and (min-resolution:$screen-safari) {
+                @supports (-webkit-appearance:none) {
+                  .cmp-button {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-color: $color-white-bg;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*-------------------------------------------*\
+        Accordion for mobile responsive. 
+  \*-------------------------------------------*/
+    .solutions-accordion {
+      .solutions-accordion-items {
+        .solutions-accordion-header {
+          .accordion-button {
+            background-color: $color-white;
+
+            .challenges-card-accordion {
+              margin-bottom: 1px;
+
+              .challenge-head {
+                font-family: $font-family-Bekaert-heading-regular;
+                font-weight: $font-weight-700;
+                font-size: $font-size-12;
+                line-height: $line-height-12;
+                letter-spacing: $letter-spacing-2;
+                color: $color-dark-blue;
+              }
+
+              .challenge-text {
+                font-weight: $font-weight-300;
+                font-size: $font-size-16;
+                line-height: $line-height-20;
+                color: $color-dark-blue;
+                font-family: $font-family-Bekaert-bold;
+              }
+            }
+          }
+
+          .accordion-button {
+            &::after {
+              background-image: none;
+            }
+          }
+        }
+
+        .solutions-accordion-body {
+          .cmp-card-cont-accordion {
+            .cmp-card-wrapper {
+              .cmp-card-inner {
+                h4 {
+                  color: $color-dark-blue;
+                  font-weight: $font-weight-400;
+                  font-family: $font-family-Bekaert-heading-regular;
+                  font-size: $font-size-24;
+                  line-height: $line-height-28;
+                  letter-spacing: $letter-spacing-02;
+                }
+
+                p {
+                  font-weight: $font-weight-400;
+                  font-size: $font-size-15;
+                  line-height: $line-height-146;
+                  color: $color-dark-gray;
+                  margin: 20px 0;
+                }
+
+                .cmp-box-button {
+                  a {
+                    grid-gap: 2em;
+                    border: 1px solid $color-dark-blue-II;
+                    padding: 0.8em 1em;
+                    color: $color-dark-blue;
+                    font-family: $font-family-Bekaert-bold;
+                    font-size: $font-size-15;
+                    font-weight: $font-weight-700;
+                    line-height: $line-height-17;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-solution {
+  background: linear-gradient(270deg, #042a4b 50%, #f7f7f7 50%);
+}

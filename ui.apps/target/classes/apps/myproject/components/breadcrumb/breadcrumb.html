@@ -1,0 +1,26 @@
+<nav data-sly-use.breadcrumb="com.myproject.aem.core.models.MyProjectBreadcrumb"
+     data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     style="--bs-breadcrumb-divider: '>';"
+     id="${component.id}"
+     class="container-fluid cmp-breadcrumb-header pt-md-2"
+     aria-label="${'Breadcrumb' @ i18n}"
+     data-sly-test="${breadcrumb.navItems.size > 0}"
+     data-cmp-data-layer="${breadcrumb.data.json}">
+    <div class="cmp-breadcrumb-empty"></div>
+	<div class="cmp-breadcrumb container-fluid d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xll-flex">
+    	<ol class="breadcrumb-list cmp-breadcrumb-list d-flex flex-wrap flex-sm-nowrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap flex-xxl-nowrap col-md-12 col-lg-12"
+        	data-sly-list.navItem="${breadcrumb.navItems}">
+        	<li class="breadcrumb-item cmp-breadcrumb-item text-uppercase ${navItem.active ? 'active' : ''}"
+        		aria-current="${navItem.active ? 'page' : ''}"
+            	data-cmp-data-layer="${navItem.data.json}">
+            	<a href="${navItem.URL}"
+                   data-cmp-clickable="${breadcrumb.data ? true : false}"
+                   data-sly-unwrap="${navItem.active}">
+                	${navItem.title}
+            	</a>
+            <meta itemprop="position" content="${navItemList.count}" />
+        </li>
+    </ol>
+</nav>
+<sly data-sly-call="${template.placeholder @ isEmpty=breadcrumb.navItems.size == 0, classAppend='cmp-breadcrumb'}"></sly>

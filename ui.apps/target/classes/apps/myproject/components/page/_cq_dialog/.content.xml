@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,granite.contexthub.configuration,cq.siteadmin.admin.properties,page-dialog]"
+    helpPath="https://www.adobe.com/go/aem_cmp_page_v2"
+    mode="edit"
+    trackingFeature="core-components:page:v2">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <customnavproperties
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Navigation and Breadcrumb Configuration"
+                                        sling:orderBefore="branding"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <hideinbreadcrumb
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                fieldDescription="When checked, page will be hidden in breadcrumb"
+                                                name="./hideInBreadCrumb"
+                                                text="Hide in Breadcrumb"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <navdescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Navigation Description"
+                                                name="./navigationDescription"
+                                                rows="{Long}3"/>
+                                            <addLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Add link to navigation"
+                                                name="./addLink"
+                                                text="Add Link in Navigation"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <subsectionimage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Image to be added in sub section"
+                                                fieldLabel="Sub Section Image"
+                                                name="./subSectionImage"
+                                                rootPath="/content/dam/myproject"/>
+                                            <hideinsearch
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                fieldDescription="When checked, page will be hidden in search"
+                                                name="./hideInSearch"
+                                                text="Hide in Search"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                        </items>
+                                    </customnavproperties>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <headervariations
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Header Variations"
+                        sling:orderBefore="desktopviewlinks"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <variations
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Select header variation"
+                                                fieldLabel="Header Variation"
+                                                name="./headerVariationClass">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <commonheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Common Header"
+                                                        value="cmp-header-common"/>
+                                                    <homeheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Home Page Header"
+                                                        value="bg-transparent cmp-header-var-trans"/>
+                                                    <contentpageheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Content Page Header"
+                                                        value="cmp-header-var-trans-content"/>
+                                                    <softwareheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Software Page Header"
+                                                        value="cmp-header-solution cmp-header-variants"/>
+                                                    <certificatesheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Certificate Page Header"
+                                                        value="cmp-header-certificates cmp-header-variants"/>
+                                                    <experttalksheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Expert Talk Page Header"
+                                                        value="cmp-header-experttalks cmp-header-variants"/>
+                                                    <whitepapersheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Whitepaper Page Header"
+                                                        value="cmp-header-whitepapers cmp-header-variants"/>
+                                                    <productsheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Product Page Header"
+                                                        value="cmp-header-products cmp-header-variants"/>
+                                                    <projectsheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Projects Page Header"
+                                                        value="cmp-header-projects cmp-header-variants"/>
+                                                    <upcomingevents
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Upcoming Events Page Header"
+                                                        value="cmp-header-upcomingevents cmp-header-variants"/>
+                                                    <animationheader
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Animation Page Header"
+                                                        value="cmp-header-var-trans-animation"/>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".contentpageheader-option-listfrom-showhide-target"/>
+                                            </variations>
+                                            <lottieanimation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Background for header"
+                                                fieldLabel="Lottie Animation"
+                                                name="./headerAsset"
+                                                rootPath="/content/dam/myproject"/>
+                                            <headerTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Title for header"
+                                                fieldLabel="Header Title"
+                                                name="./headerTitle"/>
+                                            <breadcrumbshow
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                fieldDescription="When checked, breadcrumb will be added to header"
+                                                name="./isShowBreadcrumb"
+                                                text="Show Breadcrumb"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <contentpageheaderbg
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Background for header"
+                                                fieldLabel="Background Image"
+                                                name="./backgroundImage"
+                                                rootPath="/content/dam/myproject"/>
+                                            <contentpagecontainer
+                                                granite:class="hide contentpageheader-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Content Page Header Links"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <addProjectDetailsBox
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Add project details box"
+                                                                name="./hideProjectDetails"
+                                                                text="Hide Project Section"
+                                                                uncheckedValue="false"
+                                                                value="true"/>
+                                                            <projectlabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Label for project Type"
+                                                                fieldLabel="Project Type Label "
+                                                                name="./projectLabel"/>
+                                                            <projecttype
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Value for project Type"
+                                                                fieldLabel="Project Type "
+                                                                name="./projectType"/>
+                                                            <applicationlabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Label for application"
+                                                                fieldLabel="Application Label"
+                                                                name="./appLabel"/>
+                                                            <application
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldDescription="Value for application"
+                                                                fieldLabel="Application name"
+                                                                name="./application"/>
+                                                            <partnerslabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Partners Label"
+                                                                fieldLabel="Partners Label"
+                                                                name="./partnersLabel"/>
+                                                            <partners
+                                                                granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <heading
+                                                                        granite:class="coral-Heading coral-Heading--4"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                                        level="{Long}4"
+                                                                        text="Partners Name"/>
+                                                                    <multi
+                                                                        granite:class=""
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            name="./partners"/>
+                                                                    </multi>
+                                                                </items>
+                                                            </partners>
+                                                            <letstalklabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Lets Talk Label"
+                                                                fieldLabel="Lets Talk Label"
+                                                                name="./letstalkLabel"/>
+                                                            <letstalklink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                                fieldDescription="Link for lets talk  button"
+                                                                fieldLabel="Lets Talk Button Link"
+                                                                name="./letstalklink"
+                                                                rootPath="/content/myproject"/>
+                                                            <downloadlabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Download Label"
+                                                                fieldLabel="Download Label"
+                                                                name="./downloadLabel"/>
+                                                            <downloadprojectlabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldDescription="Link for Download Project button"
+                                                                fieldLabel="Download Project Button Link"
+                                                                name="./downloadProjLink"
+                                                                rootPath="/content/dam/myproject"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="cmp-header-var-trans-content"/>
+                                            </contentpagecontainer>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </headervariations>
+                    <metatags
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Meta Tags"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        granite:class="og-check"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ogtagscheck
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Is OG Tags required or not?"
+                                                fieldLabel="OGTags required?"
+                                                name="./ogtagscheck">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <no
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="no"
+                                                        value="no"/>
+                                                    <yes
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="yes"
+                                                        value="yes"/>
+                                                </items>
+                                            </ogtagscheck>
+                                            <ogtagsrequired
+                                                granite:class="showhidetargets"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <ogtitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Enter OG Title"
+                                                        fieldLabel="Enter OG Title"
+                                                        name="./ogtitle"/>
+                                                    <ogdescription
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Enter OG Description"
+                                                        fieldLabel="Enter OG Description"
+                                                        name="./ogdescription"/>
+                                                    <ogimage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldDescription="Enter OG Image"
+                                                        fieldLabel="OG Image"
+                                                        name="./ogImage"
+                                                        rootPath="/content/dam/myproject"/>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="yes"/>
+                                            </ogtagsrequired>
+                                            <ogtagsnotrequired
+                                                granite:class="showhidetargets"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="no"/>
+                                            </ogtagsnotrequired>
+                                            <metaTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Title for metaTitle field"
+                                                fieldLabel="Meta Title"
+                                                name="./metaTitle"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </column>
+                        </items>
+                    </metatags>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

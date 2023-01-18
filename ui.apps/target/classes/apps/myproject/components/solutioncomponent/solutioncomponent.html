@@ -1,0 +1,107 @@
+
+<div class="container-dramix container-fluid"
+  data-sly-use.solution="com.myproject.aem.core.models.SolutionComponent"
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+  <div class="row solution-row">
+    <div class="col-lg-6 col-sm-12 p-0 grey-background">
+      <div class="col-sm-12 cmp-left">
+        <div class="solution-div">
+          <div class="head-text-solutions text-uppercase pb-2">${properties.heading}</div>
+          <p class="cmp-solution-title">${properties.title}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 p-0">
+      <div class="image-bg-div w-100" style="background-image:none">
+        <div class="stairs-img-text position-relative" data-sly-list="${solution.solutionList}">
+          <div class="head-text-softwares text-uppercase mb-4">${item.heading}</div>
+          <a href="${item.link @extension ='html'}" target="${item.newTab ? '_blank' : '_self'}" class="stairs-text-content-link text-decoration-none">
+            <div class="stairs-text-content">${item.description}
+              <svg class="arrow-stairs" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.5L9.5 10.5L2 19" stroke="white" stroke-width="3" />
+              </svg>
+            </div>
+          </a>
+          <svg data-sly-test="${!itemList.last}" width="320" height="1" class="stairs-divide-line my-4" viewBox="0 0 320 1"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.2" x="320" width="1.00001" height="320" transform="rotate(90 320 0)" fill="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-solution d-none d-lg-block">
+    <div class="container">
+      <div class="row solution-row">
+        <div class="col-lg-6 col-sm-12  p-0">
+          <div class="challenge-card-link position-relative text-decoration-none" data-sly-repeat="${solution.challengeList}">
+            <div class="challenges-card float-end position-relative" id="challenge-card-id"
+              data-id="Section${itemList.count}">
+              <div class="challenge-head text-uppercase py-4 px-5">${item.heading}</div>
+              <div class="challenge-text pb-4 px-5">${item.title}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12  p-0 cmp-card-col" data-sly-list="${solution.challengeList}">
+          <div class="cmp-card-cont position-relative h-100"  data-content="content-${itemList.count}" id="Section${itemList.count}"
+            style="display:${itemList.first ? 'block' : 'none'  @ context='styleString'}">
+            <div class="cmp-card-wrapper align-items-center h-100 d-flex p-3 animate__animated animate__fadeInUpBig">
+              <div class="cmp-card-inner">
+                <h4>${item.subHeading}</h4>
+                <p>${item.description}</p>
+                <div class="cmp-box-button">
+                  <div class="button dark-btn-grey">
+                    <a href="${item.buttonUrl @extension='html'}" target="${item.newTab ? '_blank' : '_self'}" type="button" id="button-80b69e4142" class="btn cmp-button rounded-0">
+                        <img src="${properties.buttonIcon}" alt="Button Icon" class="cmp-button__icon arrow-left">
+                        <span class="cmp-button__text">${item.buttonLabel}</span>
+                        <img src="${properties.buttonIcon}" alt="Button Icon" class="cmp-button__icon arrow-right">
+                    </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row solution-row d-flex d-lg-none">
+    <div class="accordion p-0 solutions-accordion" id="accordionExample" data-sly-list="${solution.challengeList}">
+      <div class="accordion-item solutions-accordion-items">
+        <h2 class="accordion-header solutions-accordion-header" id="heading${itemList.count}">
+          <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse${itemList.count}" aria-expanded="true" aria-controls="collapse${itemList.count}">
+            <div class="challenges-card-accordion" id="challenge-card-id">
+              <div class="challenge-head text-uppercase pt-3 pb-4 px-1">${item.heading}</div>
+              <div class="challenge-text pb-1 px-1">${item.title}</div>
+            </div>
+          </button>
+        </h2>
+        <div id="collapse${itemList.count}" class="accordion-collapse collapse ${itemList.first ? 'show' : ''}"
+          aria-labelledby="heading${itemList.count}" data-bs-parent="#accordionExample">
+          <div class="accordion-body solutions-accordion-body">
+            <div class="cmp-card-cont-accordion px-1">
+              <div class="cmp-card-wrapper">
+                <div class="cmp-card-inner">
+                  <h4>${item.subHeading}</h4>
+                  <p>${item.description}</p>
+                  <div class="cmp-box-button">
+                    <a class="text-decoration-none d-inline-flex" target="${item.newTab ? '_blank' : '_self'}" href="${item.buttonUrl @extension ='html'}">
+                      <span>${item.buttonLabel}</span>
+                      <span>
+                        <img src="${properties.buttonIcon}" alt="${'Arrow' @ i18n}" />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !solution.challengeList}"></sly>

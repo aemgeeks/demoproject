@@ -1,0 +1,91 @@
+/*-------------------------------------------------*\
+   General style sheet for all the fonts integrated
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Bekaert Text Regular
+   - Bekaert Text Medium
+   - Bekaert Text Bold
+   - Bekaert Text Italic
+   - Bekaert Text Medium Italic
+   - Bekaert Text Bold Italic
+   - Bekaert Heading Regular
+   - Bekaert Heading Bold
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+         Bekaert Text Regular
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Regular";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-Regular.woff2");
+    font-weight: 300;
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Medium
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Medium";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-Medium.woff2");
+    font-weight: 500;
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Bold
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Bold";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-Bold.woff2");
+    font-weight: bold;
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Italic";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-Italic.woff2");
+    font-style: italic;
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Medium Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Medium-Italic";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-MediumItalic.woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+/*-------------------------------------------*\
+         Bekaert Text Bold Italic
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Bold-Italic";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertText-BoldItalic.woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*-------------------------------------------*\
+         Bekaert Heading Regular
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Heading-Regular";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertHeadline-Regular.woff2");
+    font-style: normal;
+}
+
+/*-------------------------------------------*\
+         Bekaert Heading Bold
+\*-------------------------------------------*/
+@font-face {
+    font-family: "Bekaert-Heading-Bold";
+    src: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/fonts/WOFF2/BekaertHeadline-Bold.woff2");
+    font-style: normal;
+    font-weight: 300;
+}

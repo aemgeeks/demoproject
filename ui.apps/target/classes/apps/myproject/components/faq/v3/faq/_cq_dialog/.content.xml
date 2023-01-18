@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="FAQ "
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <faqfields
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="FAQ"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <faqtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="FAQ Title Label"
+                                                fieldLabel="Faq Title Label"
+                                                name="./faqTitle"/>
+                                            <subheading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldDescription="Sub Heading Label"
+                                                fieldLabel="Sub Heading Label"
+                                                name="./subHeading"/>
+                                            <placeholdertext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Placeholder Text"
+                                                fieldLabel="Placeholder Text"
+                                                name="./placeholderText"/>
+                                            <ErrorText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Error text to display when no results found"
+                                                fieldLabel="Error Text"
+                                                name="./errorText"/>
+                                            <NoSuggestionData
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Error text to display when no suggestion found"
+                                                fieldLabel="No Suggestion Error"
+                                                name="./noData"/>
+                                            <searchpath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Please enter content fragments root path"
+                                                fieldLabel="Content Fragments Root Path"
+                                                name="./contentFragmentParentPath"
+                                                rootPath="/content/dam"/>
+                                            <fragmentlanguage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                                fieldLabel="Fragment Language"
+                                                name="./fragmentlanguage">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <container1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="English"
+                                                        value="en"/>
+                                                    <container2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Spanish"
+                                                        value="es"/>
+                                                </items>
+                                            </fragmentlanguage>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </faqfields>
+                    <filterfields
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Filter Fields"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <resultlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Label to be displayed for results count"
+                                                fieldLabel="Results Count Label"
+                                                name="./resultCountLabel"/>
+                                            <filterlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Label to be displayed for filtered items"
+                                                fieldLabel="Filter Label"
+                                                name="./filterLabel"/>
+                                            <filterheading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Filter Page Heading for Filters Box"
+                                                fieldLabel="Filter Heading"
+                                                name="./filterPreHeading"/>
+                                            <filtertitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Filter Title for Filters Box"
+                                                fieldLabel="Filter Title"
+                                                name="./filterTitle"/>
+                                            <filterbutton
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Filter Button Label for Filters Box"
+                                                fieldLabel="Filter Button Label"
+                                                name="./filterButtonLabel"/>
+                                            <clearbutton
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Clear all button label for Filters Box"
+                                                fieldLabel="Clear Button Label"
+                                                name="./clearButtonLabel"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </filterfields>
+                    <tagItems
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tag Data"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <filtercomponent
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Filter Tag">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./tagItems">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <tagName
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Title for the tags"
+                                            fieldLabel="Enter Tag Title"
+                                            name="./tagName"/>
+                                        <tagLink
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                            fieldDescription="Rootpath for tags to be applied"
+                                            fieldLabel="Enter Tag Rootpath"
+                                            name="./tagLink"/>
+                                    </items>
+                                </field>
+                            </filtercomponent>
+                        </items>
+                    </tagItems>
+                </items>
+            </tabs>
+        </items>
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <actions
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Saved Carts"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <savedcartslabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Saved Carts Label"
+                                                    fieldLabel="Saved Carts Label"
+                                                    name="./savedCartsLabel"/>
+                                                <sortbylabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Sort by Label"
+                                                    fieldLabel="Sort by Label"
+                                                    name="./sortByLabel"/>
+                                                <namelabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Name Label"
+                                                    fieldLabel="Name Label"
+                                                    name="./nameLabel"/>
+                                                <idlabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="ID Label"
+                                                    fieldLabel="ID Label"
+                                                    name="./idLabel"/>
+                                                <datesavedlabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Date saved Label"
+                                                    fieldLabel="Date saved Label"
+                                                    name="./dateSavedLabel"/>
+                                                <descriptionlabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Description Label"
+                                                    fieldLabel="Description Label"
+                                                    name="./descriptionLabel"/>
+                                                <qtylabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Qty Label"
+                                                    fieldLabel="Qty Label"
+                                                    name="./qtyLabel"/>
+                                                <totallabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Total Label"
+                                                    fieldLabel="Total Label"
+                                                    name="./totalLabel"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </columns>
+                            </items>
+                        </actions>
+                        <restore
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Restore"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <restoresavedcart
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Restore Saved Cart Label"
+                                                    fieldLabel="Restore Saved Cart Label"
+                                                    name="./restoreSavedCart"/>
+                                                <restoredesc
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Restore Description Label"
+                                                    fieldLabel="Restore Description Label"
+                                                    name="./restoreDesc"/>
+                                                <cartname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Cart Name Label"
+                                                    fieldLabel="Cart Name Label"
+                                                    name="./cartName"/>
+                                                <numofproducts
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Number of products Label"
+                                                    fieldLabel="Number of products Label"
+                                                    name="./numOfProducts"/>
+                                                <keepacopy
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Keep a copy Label"
+                                                    fieldLabel="Keep a copy Label"
+                                                    name="./keepACopy"/>
+                                                <currentitems
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Current Items Label"
+                                                    fieldLabel="Current Items Label"
+                                                    name="./currentItems"/>
+                                                <idonotwantlabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription=" I do not want to save items for later Label"
+                                                    fieldLabel=" I do not want to save items for later Label"
+                                                    name="./iDoNotWantLabel"/>
+                                                <cancellabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Cancel Label"
+                                                    fieldLabel="Cancel Label"
+                                                    name="./cancelLabel"/>
+                                                <restorelabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Restore Label"
+                                                    fieldLabel="Restore Label"
+                                                    name="./restoreLabel"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </columns>
+                            </items>
+                        </restore>
+                        <delete
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Delete"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <deletesavedcart
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Delete Saved Cart Label"
+                                                    fieldLabel="Delete Saved Cart Label"
+                                                    name="./deleteSavedCart"/>
+                                                <deletedesc
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Delete Description Label"
+                                                    fieldLabel="Delete Description Label"
+                                                    name="./deleteDesc"/>
+                                                <deletelabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Delete Label"
+                                                    fieldLabel="Delete Label"
+                                                    name="./deleteLabel"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </columns>
+                            </items>
+                        </delete>
+                    </items>
+                </tabs>
+            </items>
+        </content>
+    </content>
+</jcr:root>

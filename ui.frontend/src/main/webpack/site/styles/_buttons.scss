@@ -1,0 +1,573 @@
+
+
+/*-------------------------------------------------*\
+   General style sheet for the Button Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Button with dark background and dark grey border
+   - Button with dark background and light grey border
+   - Button with dark background and no border
+   - White button for clear all with cross
+   - Blue button for filter with tick icon
+   - Button with light background and  white border
+   - Button with light background and other white border
+   - Button with light background and no border
+   
+\*-------------------------------------------------*/
+.dark-buttons-bg {
+    background-color: #1E1E1E;
+}
+/*-------------------------------------------*\
+Button with dark background and dark grey border
+\*-------------------------------------------*/
+.dark-btn {
+    .btn {
+        border: 1px solid $color-white-II;
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-white;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+ Button with dark background and light grey border
+\*-------------------------------------------*/
+
+.light-btn {
+    .btn {
+        border: 1px solid $color-grey-II;
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-white;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+
+
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+    Button with dark background and no border
+\*-------------------------------------------*/
+.no-btn {
+    .btn {
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-weight-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-white;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+
+            }
+        }
+
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+   White button for clear all with cross
+\*-------------------------------------------*/
+.white-btn {
+    .btn {
+        border: 1px solid $color-white-II;
+        background-color: $color-white;
+
+        width: auto;
+        min-height: 49px;
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-regal-blue;
+            margin: auto;
+        }
+
+        .arrow-left {
+            display: none;
+        }
+
+        .arrow-right {
+            margin: auto;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-regal-blue;
+            transition: 1s;
+
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+   Blue button for filter with tick icon
+\*-------------------------------------------*/
+.dark-blue-btn {
+    .btn {
+        border: 1px solid $color-regal-blue;
+        background: $color-regal-blue;
+        width: auto;
+        min-height: 49px;
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-white;
+            margin: auto;
+        }
+
+        .arrow-left {
+            display: none;
+        }
+
+        .arrow-right {
+            margin: auto;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-white;
+            transition: 1s;
+
+            .cmp-button__text {
+                opacity: 0.7;
+                transition: 1s;
+            }
+
+            .arrow-right {
+                opacity: 0.7;
+                transition: 1s;
+
+            }
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+Button with light background and  white border
+\*-------------------------------------------*/
+.dark-btn-grey {
+    .btn {
+        border: 1px solid $color-regal-blue-II;
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-regal-blue;
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+}
+
+/*-------------------------------------------*\
+Button with light background and other white border
+\*-------------------------------------------*/
+.light-btn-grey {
+    .btn {
+        border: 1px solid $color-dark-blue-II;
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            border: 1px solid $color-dark-blue;
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+}
+
+/*-------------------------------------------*\
+    Button with light background and no border
+\*-------------------------------------------*/
+.no-btn-grey {
+    .btn {
+        display: flex;
+        width: auto;
+        padding: 0;
+        min-height: 49px;
+
+        .arrow-left,.arrow-right{
+            position: relative;
+        }
+        .arrow-left {
+            opacity: 0;
+            left: 0;
+            margin: auto 0;
+
+        }
+
+        .arrow-right {
+            right: 20px;
+            margin: auto 0 auto 20px;
+        }
+
+
+        .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-style: $font-style-normal;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
+            margin: auto 30px auto 20px;
+        }
+    }
+
+    .btn {
+        &:hover {
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+                right: 0;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .arrow-left {
+                transform: translate(15px);
+                transition: 0.5s;
+                opacity: 1;
+                right: 10px;
+            }
+
+            .cmp-button__text {
+                transform: translate(15px);
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+}

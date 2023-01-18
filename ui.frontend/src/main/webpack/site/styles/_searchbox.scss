@@ -1,0 +1,200 @@
+/*-------------------------------------------------*\
+   General style sheet for the searchbox Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - searchbox Component search results page
+      
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+    search results box
+\*-------------------------------------------*/
+
+.search_results {
+  width: 100%;
+  background: $color-gray;
+
+  @media (max-width: $screen-md-min) {
+    height: 377px;
+  }
+
+  .search_input_adjust {
+    @media (max-width: $screen-md-min) {
+      position: relative;
+      bottom: 100px;
+    }
+  }
+
+  .results {
+    font-style: $font-style-normal;
+    font-weight: $font-weight-700;
+    font-size: $font-size-70;
+    line-height: $line-height-84;
+    letter-spacing: $letter-spacing-02;
+    color: $color-dark-blue;
+
+    @media (max-width: $screen-md-min) {
+      margin-top: 45px;
+      font-size: $font-size-36;
+      line-height: $line-height-51;
+    }
+
+    font-family: $font-family-Bekaert-heading-bold;
+  }
+
+  .clear_search {
+    font-style: $font-style-normal;
+    font-weight: $font-weight-700;
+    font-size: $font-size-16;
+    line-height: $line-height-17;
+    color: $color-dark-blue;
+  }
+
+  .cmp-search-inputbox-outer {
+    padding: 1em 0em 3em 0em;
+
+    @media (max-width: $screen-md-min) {
+      margin: -40px 0px 0px 0px;
+    }
+
+    .search_input {
+      height: 68px;
+      background: $color-white;
+
+      .search_input_box {
+        font-size: $font-size-16;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-400;
+        line-height: $line-height-18;
+
+        &:focus{
+          border:0px;
+          box-shadow: unset;
+        }
+        &:hover{
+          border: 0px;
+          box-shadow: unset;
+        }
+        &:active{
+          border: 0px;
+          box-shadow: unset;
+        }
+      }
+    }
+  }
+
+  .cmp-search-row {
+    padding: 5em 0em 0em 0em;
+
+    @media (max-width: $screen-md-min) {
+      padding: 0em;
+    }
+  }
+
+  .result_distance {
+    padding: 0px 0px 47px 0px;
+  }
+
+  .rectangle {
+    width: 1px;
+    height: 45px;
+    left: 619px;
+    top: 399px;
+    background: $color-pure-cyan;
+  }
+
+  .border-r {
+    border: none;
+  }
+
+  .search_symbol {
+    margin: auto 30px auto auto;
+    cursor: pointer;
+  }
+
+  .serach_input_box::-webkit-input-placeholder {
+    font-style: $font-style-normal;
+    font-weight: $font-weight-400;
+    font-size: $font-size-16;
+    line-height: $line-height-18;
+    color: $color-dark-blue;
+  }
+
+  .clear_serach_button {
+    text-align: end;
+    padding-top: 3.5em;
+
+    @media (max-width: $screen-md-min) {
+      position: relative;
+      top: 80px;
+      text-align: start;
+    }
+
+    .clear_search {
+      cursor: pointer;
+      font-family: $font-family-Bekaert-bold;
+      font-size: $font-size-15;
+      font-weight: $font-weight-700;
+      line-height: $line-height-17;
+
+      &:hover {
+        .clear-search-close {
+          cursor: pointer;
+          transition: 0.5s;
+
+          .close-cross-icon {
+            transition: 0.5s;
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .searchProduct-show {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    background-color: $color-white;
+    overflow-x: hidden;
+    display: none;
+    border: 1px solid $color-dark-blue-II;
+    top: 68px;
+    z-index: 1080;
+
+    @media only screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+      width: 100%;
+      top: 68px;
+      height: 109px;
+      z-index: 1090;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px 0px 0px 118px;
+
+      li {
+        margin: 5px 0px 20px 0px;
+        padding: 0px 10px 0px 0px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: $color-black;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .clicklist-items {
+      font-style: $font-style-normal;
+      font-weight: $font-weight-400;
+      font-size: $font-size-16;
+      line-height: $line-height-18;
+      color: $color-dark-shade-gray;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+/*-------------------------------------------------*\
+   General style sheet for the Contact Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Contact Container
+   - Contact Container Heading & Sub title
+   - Contact Container Image with Text
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+        Contact Container
+\*-------------------------------------------*/
+.contact {
+    background-color: $color-dark-blue;
+
+    .container-fluid {
+        @media (max-width: $screen-md-min) {
+            padding: 0;
+        }
+    }
+
+    .contact-row {
+        margin: 90px 0;
+
+        @media screen and (max-width: $screen-md-min) {
+            margin: 60px 0 0 0;
+        }
+    }
+}
+
+/*-------------------------------------------*\
+    Contact Container Heading & Sub title
+\*-------------------------------------------*/
+.cmp-contact-container {
+    .cmp-contact {
+        &__heading {
+            font-family: $font-family-Bekaert-heading-bold;
+            font-weight: $font-weight-700;
+            font-size: $font-size-70;
+            line-height: $line-height-90;
+            color: $color-white;
+            letter-spacing: $letter-spacing-02;
+            margin-bottom: 60px;
+            width: 60%;
+            @media screen and (max-width: $screen-xll-b-lll-min) {
+                width: 70%;
+            }
+
+            @media screen and (max-width: $screen-md-min) {
+                width: 100%;
+                padding: 18px 30px 18px 30px;
+                font-size: $font-size-36;
+                line-height: $line-height-55;
+            }
+            @media(min-width: $screen-md-min) and (max-width: $screen-xll-typo-min) {
+                font-size: $font-size-56;
+                line-height: $line-height-65;
+              }
+        }
+
+        &__subheading {
+            font-family: $font-family-Bekaert-heading-regular;
+            font-weight: $font-weight-400;
+            font-size: $font-size-10;
+            line-height: $line-height-12;
+            color: $color-picton-blue;
+            letter-spacing: $letter-spacing-2;
+            margin-bottom: 30px;
+
+            @media (max-width: $screen-md-min) {
+                padding-left: 30px;
+                margin-bottom: 0;
+            }
+        }
+
+        /*-------------------------------------------*\
+    Contact Container Image with Text
+\*-------------------------------------------*/
+        &__content {
+            .cmp-details {
+                padding: 0 0 0 40px;
+                @media (max-width: $screen-md-min) {
+                    padding: 0 0 0 30px;
+                }
+
+                &:not(:only-child) {
+                    z-index: 1;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    min-height: auto;
+                    min-width: auto;
+                }
+
+                h3,
+                p {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    color: $color-white;
+                    font-weight: $font-weight-400;
+                }
+
+                h3 {
+                    font-size: $font-size-20;
+                    line-height: $line-height-24;
+                }
+
+                p {
+                    font-size: $font-size-15;
+                    line-height: $line-height-146;
+                    font-family: $font-family-Bekaert-regular;
+                }
+            }
+
+        }
+    }
+    .cmp-contact-expert-grid {
+        grid-column-gap: 40px;
+            .cmp-contact__content {
+                position: relative;
+                width: 100%;
+              }
+              .cmp-contact__content img {
+                display: block;
+                width: 100%;
+              }
+              .cmp-contact__content::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: $color-black-05;
+              }
+    }
+}

@@ -1,0 +1,369 @@
+/*-------------------------------------------------*\
+   General style sheet for the Project Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Project Container
+   - Teaser Container 
+   
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+          Project Container
+\*-------------------------------------------*/
+.project-dramix-container {
+    @media (min-width: $screen-md-min) {
+        padding-top: 100px;
+    }
+
+    @media (min-width: $screen-xll-c-min) {
+        .cmp-columncontrol {
+            padding: 0;
+        }
+    }
+
+    .row {
+        @media (min-width: $screen-xll-c-min) {
+            width: 100%;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    @media (max-width: $screen-md-min) {
+        margin-bottom: 10em;
+    }
+
+    .column-inner {
+        @media (min-width: $screen-md-min) {
+            position: sticky;
+            top: 6em;
+            padding-bottom: 5em;
+        }
+
+
+        .text {
+            @media (max-width: $screen-md-min) {
+                margin: 30px 15px 0px 15px;
+            }
+
+            margin:16px 0px 0px 0px;
+
+            .cmp-text {
+                h6 {
+                    font-family: $font-family-Bekaert-heading-regular;
+                    font-size: $font-size-10;
+                    line-height: $line-height-12;
+                    text-transform: uppercase;
+                    color: $color-pure-cyan;
+                    font-weight: $font-weight-400;
+                    font-style: $font-weight-normal;
+                    letter-spacing: $letter-spacing-2;
+                }
+
+                h1 {
+                    font-family: $font-family-Bekaert-heading-bold;
+                    font-size: $font-size-70;
+                    line-height: $line-height-90;
+                    color: $color-dark-blue;
+                    font-weight: $font-weight-700;
+                    font-style: $font-weight-normal;
+                    letter-spacing: $letter-spacing-02;
+
+                    @media (max-width: $screen-md-min) {
+                        font-size: $font-size-36;
+                        line-height: $line-height-55;
+                        width: 100%;
+                    }
+                    @media(min-width: $screen-md-min) and (max-width: $screen-xll-typo-min) {
+                        font-size: $font-size-56;
+                        line-height: $line-height-65;
+                      }
+                }
+            }
+        }
+
+        .dark-btn-grey {
+            margin-top: 30px;
+
+            @media (max-width: $screen-md-min) {
+                margin: 30px 0 60px 18px;
+                font-size: $font-size-15;
+            }
+
+            .cmp-button {
+                width: 205px;
+
+                .cmp-button__text {
+                    margin: auto 25px auto 20px;
+                }
+            }
+        }
+    }
+
+    /*-------------------------------------------*\
+             Teaser Container
+\*-------------------------------------------*/
+    .column-2 {
+        @media (min-width: $screen-md-min) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card-wrapper {
+            @media (min-width: $screen-md-min) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .cmp-columncontrol {
+                @media (min-width: $screen-md-min) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .col-md-6{
+                &:first-child{
+                    .teaser{
+                        .cmp-teaser{
+                            .cmp-teaser__content{
+                                .button{
+                                    @media (min-width: $screen-md-min) {
+                                        margin-bottom: 80px;
+                                    }                
+                                }
+                            } 
+                        } 
+                    }
+                }
+                &:nth-child(2){
+                    .teaser{
+                        .cmp-teaser{
+                            .cmp-teaser__content{
+                                .button{
+                                    @media (min-width: $screen-md-min) {
+                                        margin-bottom: 80px;
+                                    }
+                                }
+                            } 
+                        } 
+                    }
+                }
+                &:nth-child(3){
+                    .teaser{
+                        .cmp-teaser{
+                            margin-top: 1em;
+                        } 
+                    }
+                }
+                &:nth-child(4){
+                    .teaser{
+                        .cmp-teaser{
+                            margin-top: 1em;
+                        } 
+                    }
+                } 
+            }
+
+            .teaser {
+                height: 100%;
+
+                .cmp-teaser {
+                    display: inline-flex;
+                    flex-direction: column;
+                    height: 100%;
+                    cursor: pointer;
+
+                    .cmp-teaser__image {
+                        .cmp-image {
+                            overflow: hidden;
+                            position: relative;
+                            img {
+                                transition: 0.5s all ease-in-out;
+                                object-fit: cover;
+                                height: 306px;
+                                width: 306px;
+                                @media (min-width: $screen-xll-min)and (max-width: $screen-xll-c-min){
+                                    height: 318px;
+                                    width: 318px;
+                                }
+                                @media (min-width: $screen-xl-min) and (max-width: $screen-xll-th-min){
+                                    height: 273px;
+                                    width: 273px;
+                                }
+                                @media (min-width: $screen-lg-m-min) and (max-width: $screen-lg-l-min){
+                                    height: 228px;
+                                    width: 228px;
+                                }
+                                @media (min-width: $screen-xs-min) and (max-width: $screen-md-min){
+                                    height: 198px;
+                                    width: 100%;
+                                }
+                            }
+
+                            .calculator-icon {
+                                width: 60px;
+                                height: 60px;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                transform: scale(1);
+                                @media (min-width: $screen-xs-min) and (max-width: $screen-md-min){
+                                    height: auto;
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                    .cmp-teaser__content {
+                        height: 100%;
+                        display: inline-flex;
+                        flex-direction: column;
+
+                        .cmp-teaser__title {
+                            margin: 20px 0;
+                            font-family: $font-family-Bekaert-bold;
+                            color: $color-dark-blue;
+                            line-height: $line-height-24;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-20;
+
+                            .cmp-teaser__title-link {
+                                text-decoration: none;
+                            }
+                        }
+
+                        .cmp-teaser__description {
+                            flex: 1;
+
+                            p {
+                                margin: 0;
+                                color: $color-dark-gray;
+                                line-height: $line-height-146;
+                                font-weight: $font-weight-400;
+                                font-size: $font-size-15;
+                            }
+                        }
+
+                        .teaser-horz-line {
+                            color: $color-light-gray;
+                        }
+
+                        .button {                            
+
+                            &.no-btn-grey {
+                                .cmp-button {
+                                    position: relative;
+                                    right: 15px;
+                                    border: none;
+                                    width: 152px;
+
+                                    .arrow-left {
+                                        left: -5px;
+
+                                        @media (max-width: $screen-md-min) {
+                                            left: 0;
+                                        }
+                                    }
+
+                                    .cmp-button__text {
+                                        margin: auto 15px auto 10px;
+                                    }
+
+                                    &:hover {
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .cmp-teaser__image {
+                            .cmp-image {
+                                img {
+                                    transform: scale(1.2);
+                                }
+
+                                .calculator-icon {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+
+                        .cmp-teaser__content {
+                            .button {
+                                .btn {
+                                    padding-right: 0;
+                                    transition: 1s;
+
+                                    .arrow-right {
+                                        right: 0;
+                                        transition: 0.5s;
+                                        opacity: 0;
+                                    }
+
+                                    .arrow-left {
+                                        transform: translate(15px);
+                                        transition: 0.5s;
+                                        opacity: 1;
+                                        right: 10px;
+
+                                    }
+
+                                    .cmp-button__text {
+                                        transform: translate(15px);
+                                        transition: 0.5s;
+
+                                    }
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+    .cmp-columncontrol {
+        .col-md-6 {
+            &.column-2 {
+                .cmp-big {
+                    .cmp-columncontrol {
+                        .row {
+                            .col-md-6 {
+                                @media(min-width: $screen-xll-c-min) {
+                                    &:nth-last-child(even) {
+                                        padding-left: 0;
+                                    }
+    
+                                    &:nth-last-child(odd) {
+                                        .teaser{
+                                            .cmp-teaser{
+                                                .cmp-teaser__image {
+                                                    .cmp-image{
+                                                        .cmp-image__image{
+                                                            width: 310px;
+                                                        }
+                                                    }
+                                                } 
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

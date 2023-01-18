@@ -1,0 +1,144 @@
+//== Base
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+
+input,
+select,
+textarea {
+  font-family: $font-family-Bekaert-regular;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+dl,
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dd,
+dt {
+  margin: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.root {
+  &.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: unset;
+    &.responsivegrid {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 100%;
+    }
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .container {
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+// container width
+main {
+  &.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: unset;
+    &.responsivegrid {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 100%;
+    }
+  }
+
+  .container {
+    &.responsivegrid {
+      &.aem-GridColumn {
+        &.aem-GridColumn--default--12 {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}

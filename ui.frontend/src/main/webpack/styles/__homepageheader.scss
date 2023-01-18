@@ -1,0 +1,444 @@
+/*-------------------------------------------------*\
+   General style sheet for the Header Banner Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Banner Videos
+   - Banner Animations
+   - Banner Edit Mode
+   - Banner Experience Fragment
+   
+\*-------------------------------------------------*/
+
+
+/*-------------------------------------------*\
+       Homepage Banner
+\*-------------------------------------------*/
+
+.Homepage{
+	width: 100%;
+	position: relative;
+    background: transparent;
+	
+
+	/*-------------------------------------------*\
+       Mobile View banner hide in desktop view
+	\*-------------------------------------------*/
+
+	.list-catecory-mb {
+		display: none;
+	}
+
+	/*-------------------------------------------*\
+       Desktop View banner
+	\*-------------------------------------------*/
+	.List-catecory{
+		width: 100%;	
+		z-index: 3;			
+		position:absolute;
+		display: block;		
+		overflow: hidden;
+		
+		ul{						
+			list-style: none;
+			z-index: 999;			
+			li{	
+				width:20%;
+				height: 100vh;	
+				padding-bottom: 80px;
+				border-right: 1px solid $color-light-white-transparent;
+				transition: 0.6s;
+				position: relative;
+				cursor: pointer;		
+				
+				&.active{
+					width: 60%;
+					.title{
+						animation: move 1s linear forwards;
+						animation-delay: 1s;
+					}
+				}
+
+				&:last-child{
+					border-right: 0px;
+				}
+
+				.title{
+					width: 500px;
+					top: 20%;
+					left: 10%;
+					position: absolute;
+					opacity: 0;
+					transition: .5s;
+					color: $color-white;
+					h1{
+						color: $color-white;
+						font-size: $font-size-48;
+						letter-spacing: $letter-spacing-02;						
+					}			
+				}
+
+				.description{
+					position: absolute;
+					bottom: 12%;
+					left: 10%;
+					h4{
+						font-size: $font-size-16;						
+						color:$color-white;
+						font-weight: $font-weight-700;
+						#number{
+							padding-right: 10px;
+						}
+					}				
+				}
+
+				video{
+					opacity: 0;
+				}
+
+				.details{
+					display: flex;
+					margin-top: 30px;
+					width: 200px;
+					align-items: center;
+					justify-content: space-between;
+					span{
+						img{
+							width: 10px;
+						}					
+					}
+					a{
+						width: 163px;
+						font-size: $font-size-20;
+						color: $color-white;
+						line-height: $line-height-32;
+						font-style: $font-style-normal;
+					}
+				}
+				.video{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.List1{
+				&.active{
+					.title{
+						left: 210px;
+						@media only screen and (min-width:$screen-lg-min) and (max-width:$screen-xl-l-min){
+							left: 27.5%;
+						}
+					}
+					.description{
+						left: 210px;
+						@media only screen and (min-width:$screen-lg-min) and (max-width:$screen-xl-l-min){
+							left: 28%;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+	
+	
+
+	/*-------------------------------------------*\
+       Banner image and lottie animation
+    \*-------------------------------------------*/
+
+	#banner {		
+		img{
+			position: absolute;
+			width: 100%;
+			height:100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			object-fit: cover;
+		}
+
+		.video{
+			position: absolute;
+			width: 100%;
+			height:100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			object-fit: cover;
+		}
+	}
+
+
+	.banner1{
+	 display: none;
+	}
+
+	/*-------------------------------------------*\
+       Banner Title animation
+    \*-------------------------------------------*/
+
+	@keyframes move{
+		0%{
+			top: 40%;
+			opacity: 0;
+		}
+		50%{
+			top: 30%;
+			opacity: 0.5;
+		}
+		100%{
+			top: 20%;
+			opacity: 1;
+		}
+	}
+
+	
+
+	/*-------------------------------------------*\
+       Mobile Banner
+    \*-------------------------------------------*/
+	
+
+	@media only screen and (min-width:$screen-xs-min) and (max-width:$screen-md-min){
+
+    /*-------------------------------------------*\
+       Desktop view should hide
+    \*-------------------------------------------*/
+
+		.List-catecory{	
+			display: none;		
+		}
+
+		#banner {	
+			display: none;
+		}
+
+		.banner1 {	
+			display: block;	
+			.video{				
+				width: 100%;
+				height:100vh;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				object-fit: cover;
+			}			
+			img{				
+				width: 100%;
+				height:100vh;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				object-fit: cover;
+			}
+			&::before{
+				@media (min-width: $screen-xs-min) and (max-width: $screen-lg-m-min){
+				background-image: linear-gradient(to bottom right,$color-black,$color-black);
+				bottom: 0;
+				content: "";
+				left: 0;
+				opacity: .6;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 0;
+				}
+			}
+		}
+
+		.mousegrab{
+			cursor: move; 			
+			cursor: -webkit-grab;
+			cursor:    -moz-grab;
+			cursor:         grab;
+		}
+
+		.list-catecory-mb{
+			display: block;
+			position: absolute;
+			left: 0%;
+			top: 0%;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			z-index: 999;		
+	
+			.list1 {
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				gap: 5px;				
+				.box1 {
+					height: 100%;
+					width: 100%;
+					position: relative;
+					.title {
+						width: 200px;
+						top: 28%;
+						left: 25%;
+						position: absolute;						
+						transition: .5s;
+						color: $color-white;
+						z-index: 1;
+						h1{
+							color: $color-white;
+							font-size: $font-size-32;
+							line-height: $line-height-50;							
+							letter-spacing: $letter-spacing-02;							
+						}	
+					}
+					.description{
+						position: absolute;						
+						left: 25%;
+						color: $color-white;
+						top: 40em;
+						z-index: 1;	
+						h4 {
+							display: flex;
+							padding-bottom: 10px;
+							font-size: $font-size-12;
+							font-weight: $font-weight-700;
+							#text {
+								display: flex;
+								margin-left: 10px;
+							}
+						}
+						.details {
+							width: 241px;
+							color: $color-white;
+							padding: 0px 26px 0px 0px;
+							a{
+								color: $color-white;
+								font-size: $font-size-20;
+    							font-weight: $font-weight-300;
+								cursor: pointer;
+								z-index: 999999;
+							}
+						}
+					}
+
+					&.active{
+
+						.title{
+	
+							&:first-child{
+								color: $color-white;
+								left: 25%;
+								position: absolute;
+								top: 20%;
+								-webkit-transition: .5s;
+								transition: .5s;
+								width: 200px;
+
+								+ .description{										
+									color: $color-white;
+									left: 25%;
+									position: absolute;									
+								}
+
+							}
+
+						}
+	
+					}
+				}
+
+			}
+			
+		}
+
+	}
+
+	/*-------------------------------------------*\
+      Mobile view media query
+    \*-------------------------------------------*/
+
+	@media only screen 
+    and (min-device-width : $screen-xs-min) 
+    and (max-device-width : $screen-xs-a-min)    
+	{ 
+	.list-catecory-mb{
+		display: block;
+
+		.list1{
+			.box1 {
+				.description{
+					top: 32em;
+				}
+
+			}
+
+		}
+		
+	}
+  }
+
+    @media only screen 
+    and (min-device-width : $screen-xs-b-min) 
+    and (max-device-width : $screen-xs-c-min)    
+	{ 
+		.list-catecory-mb{
+			display: block;
+
+			.list1{
+				.box1 {
+					.description{
+						top: 32em;
+					}
+
+				}
+
+			}
+			
+		}
+  	}
+
+	@media only screen 
+	and (min-device-width : $screen-xs-d-min) 
+	and (max-device-width : $screen-xs-g-min)    
+	{ 
+		.list-catecory-mb{
+			display: block;
+
+			.list1{
+				.box1 {
+					.description{
+						top: 36em;
+					}
+
+				}
+
+			}
+			
+		}
+	}
+
+
+}
+
+/*-----------------------------------------------------*\
+ Homepage Banner editor height set For Desktop view
+\*-----------------------------------------------------*/
+.Homepage {
+  &.homepageedit{
+	&.cq-Editable-dom{		
+		height: 700px;
+	}
+  }
+}
+
+/*-----------------------------------------------------*\
+ Homepage Experience editor height set For Desktop view
+\*-----------------------------------------------------*/
+.exp-edit {
+	.Homepage{
+		height: 700px;
+	}
+}

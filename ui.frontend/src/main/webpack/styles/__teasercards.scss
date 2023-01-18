@@ -1,0 +1,80 @@
+/*-------------------------------------------------*\
+   General style sheet for the Teaser Cards
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - TeaserCard Mobile Slider 
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+            TeaserCard Mobile Slider
+\*-------------------------------------------*/
+.teasercards {
+    .card-wrapper {
+        .carousel {
+            margin-bottom: 3.75rem;
+
+            .carousel-indicators {
+                margin-bottom: 0;
+                position: unset;
+                margin-top: 1.875rem;
+
+                @media(max-width:$screen-md-min) {
+                    margin-top: 0;
+                }
+
+                [data-bs-target] {
+                    background-color: $color-cloud-gray;
+                    width: 35.75px;
+                    margin-right: 5px;
+                }
+
+                .active {
+                    background-color: $color-black;
+                }
+            }
+
+            .carousel,
+            .carousel-innr,
+            .carousel-inner>.carousel-item {
+                overflow: hidden;
+            }
+
+            .carousel-inner {
+                >.carousel-item {
+                    &.active {
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                }
+
+                >.carousel-item-next {
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+
+                >.carousel-item-end {
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+    }
+    @media (max-width: $screen-md-min) {
+        .one-treaser {
+            .cmp-small {
+                .carousel {
+                    &.slide {
+                        .carousel-indicators {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

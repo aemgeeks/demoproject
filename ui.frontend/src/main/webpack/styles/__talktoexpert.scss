@@ -1,0 +1,289 @@
+/*-------------------------------------------------*\
+   General style sheet for the Talk to Expert
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Talk to Expert
+   - UI - AEM Editable Sections
+   
+\*-------------------------------------------------*/
+/*-------------------------------------------*\
+        Talk to Expert
+\*-------------------------------------------*/
+
+.cmp-contactbanner {
+    margin: 0 auto;
+    padding-bottom: 120px;
+
+    @media(max-width:$screen-md-min) {
+        padding-bottom: 0;
+    }
+
+    .container-fluid {
+
+        // 768px
+        @media(max-width:$screen-md-min) {
+            padding: 0;
+        }
+    }
+
+    .bg-image {
+
+        // 768px
+        @media(max-width:$screen-md-min) {
+            height: 100%;
+        }
+    }
+
+    .cmp-contactbox {
+
+        // 768px
+        @media(max-width:$screen-md-min) {
+            height: auto;
+            padding: 0;
+        }
+
+        // 768px and 1024px
+        @media(min-width:$screen-md-min) and (max-width:$screen-lg-m-min) {
+            height: auto;
+        }
+
+        .cmp-cbox-pos-inner {
+            @media(max-width:$screen-md-min) {
+                position: static;
+                margin: 0;
+            }
+
+            .cmp-box-inner {
+
+                // 768px
+                @media(max-width:$screen-md-min) {
+                    padding: 0;
+                }
+
+                // 768px and 1024px
+                @media(min-width:$screen-md-min) and (max-width:$screen-lg-m-min) {
+                    padding: 0;
+                    width: 100%;
+                }
+
+                .cmp-box-right-wrapper {
+                    background: $color-background-red;
+                    margin-top: -20rem;
+
+                    // 768px
+                    @media(max-width:$screen-md-min) {
+                        margin-top: 0;
+                    }
+
+                    // 768px and 1024px
+                    @media(min-width:$screen-md-min) and (max-width:$screen-lg-m-min) {
+                        margin-top: 0;
+                    }
+
+
+                    .cmp-card-contact {
+                        background: $color-background-red;
+                        display: grid;
+                        padding: 3em;
+
+                        //768px
+                        @media(max-width:$screen-md-min) {
+                            padding: 5em 3em;
+                            grid-gap: 1em;
+                        }
+
+                        // 1373px and 1549px
+                        @media(min-width:$screen-xl-la-min) and (max-width:$screen-xll-a-min) {
+                            padding: 4em 3em;
+                            grid-gap: 1em;
+                            width: 100%;
+                            max-width: 70%;
+                            margin: 0 auto;
+                        }
+
+                        // 1280px and 1373px
+                        @media(min-width:$screen-xl-l-min) and (max-width:$screen-xl-la-min) {
+                            padding: 4em 3em;
+                            grid-gap: 1em;
+                            width: 100%;
+                            max-width: 85%;
+                            margin: 0 auto;
+                        }
+
+                        // 1550px and 1920px
+                        @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
+                            padding: 4em;
+                            grid-gap: 1.5em;
+                            width: 100%;
+                            max-width: 70%;
+                            margin: 0 auto;
+                        }
+
+                        // 1921px
+                        @media(min-width:$screen-xll-d-min) {
+                            padding: 6em 3em;
+                            width: 100%;
+                            max-width: 70%;
+                            margin: 0 auto;
+                        }
+
+                        h4 {
+                            font-size: $font-size-30;
+                            color: $color-white;
+                            font-family: $font-family-Bekaert-heading-regular;
+                            font-weight: $font-weight-400;
+                            margin: 10px 0;
+                            line-height: $line-height-50;
+                            width: 100%;
+                            max-width: 80%;
+                            margin: 10px auto;
+
+                            //768px
+                            @media(max-width:$screen-md-min) {
+                                margin: auto 0;
+                                line-height: $line-height-40; 
+                            }
+
+                            // 1024px and 1150px
+                            @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
+                                max-width: 80%;
+                            }
+
+                            // 1280px and 1549px
+                            @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
+                                max-width: 70%;
+                                margin: 10px 10px 10px 0;
+                            }
+
+                            // 1550px and 1920px
+                            @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
+                                max-width: 80%;
+                                margin: 10px 10px 10px 0;
+                            }
+
+                            // 1921px
+                            @media(min-width:$screen-xll-d-min) {
+                                max-width: 70%;
+                                margin: 10px 10px 10px 0;
+                            }
+                        }
+
+                        p {
+                            color: $color-white;
+                            font-size: $font-size-15;
+                            font-weight: $font-weight-400;
+                            width: 100%;
+                            max-width: 70%;
+                            margin: 20px auto;
+                            line-height: $line-height-146;
+
+                            //768px
+                            @media(max-width:$screen-md-min) {
+                                max-width: 100%;
+                            }
+
+                            // 1024px and 1150px
+                            @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
+                                max-width: 80%;
+                            }
+
+                            // 1280px and 1549px
+                            @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
+                                margin: 10px 10px 10px 0;
+                                max-width: 100%;
+                            }
+
+                            // 1550px and 1920px
+                            @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
+                                margin: 10px 10px 10px 0;
+                                max-width: 100%;
+                            }
+
+                            // 1921px
+                            @media(min-width:$screen-xll-d-min) {
+                                max-width: 100%;
+                            }
+                        }
+
+                        .cmp-box-button {
+                            margin: 20px auto;
+                            width: 100%;
+                            max-width: 70%;
+
+                            //768px
+                            @media(max-width:$screen-md-min) {
+                                max-width: 100%;
+                            }
+
+                            // 1024px and 1150px
+                            @media(min-width:$screen-lg-m-min) and (max-width:$screen-lg-la-min) {
+                                max-width: 80%;
+                            }
+
+                            // 1280px and 1549px
+                            @media(min-width:$screen-xl-l-min) and (max-width:$screen-xll-a-min) {
+                                margin: 10px 10px 10px 0;
+                            }
+
+                            // 1550px and 1920px
+                            @media(min-width:$screen-xll-b-min) and (max-width:$screen-xll-c-min) {
+                                max-width: 100%;
+                                margin: 10px 10px 10px 0;
+                            }
+
+                            // 1921px
+                            @media(min-width:$screen-xll-d-min) {
+                                margin: 10px 10px 10px 0;
+                            }
+
+                            .dark-btn {
+                                .cmp-button {
+                                    width: 173px;
+
+                                    .cmp-button__text {
+                                        margin: auto 25px auto 20px;
+                                    }
+                                }
+                                @media not all and (min-resolution:$screen-safari)
+                                { @supports (-webkit-appearance:none) {
+                                    .cmp-button { 
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        appearance: none;
+                                        background-color: $color-orange-bg;
+                                    }
+                                }}
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-------------------------------------------*\
+    UI - AEM Editable Sections
+\*-------------------------------------------*/
+
+.cmp-contactbanner {
+    &.talk-to-expert-edit {
+        height: 100%;
+    }
+}
+
+@media(max-width:$screen-md-min) {
+    .cmp-contactbanner {
+        width: 100%;
+
+        .row {
+            &.cmp-contactbox-row {
+                width: 100%;
+            }
+        }
+    }
+}

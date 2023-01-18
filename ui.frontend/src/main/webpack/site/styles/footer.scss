@@ -1,0 +1,109 @@
+/*-------------------------------------------------*\
+   General style sheet for the Footer Component
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - Apps icon and logo
+   - Footer Links 
+   - Blue copyright div bottom
+  
+   
+\*-------------------------------------------------*/
+
+
+.container-footer {
+
+  .row {
+    &.cmp-footer-row {
+      padding: 7.625em 0;
+      border-top: 1px solid $green-white;
+
+      @media(max-width:$screen-md-min) {
+        padding: 30px 0;
+      }
+
+      /*-------------------------------------------*\
+Apps icon and logo
+\*-------------------------------------------*/
+      .footer-bekaert-icon {
+        .footer-media-links {
+          .svg-middle-line {
+            margin: 0 30px;
+          }
+        }
+      }
+
+      /*-------------------------------------------*\
+Footer Links 
+\*-------------------------------------------*/
+      .footer-links {
+        .comp_footerLinks {
+          .comp_footerLinks-list {
+            .comp_footerLinks-list-item {
+              width: 29%;
+
+              a {
+                font-family: $font-family-Bekaert-regular;
+                font-weight: $font-weight-400;
+                font-size: $font-size-15;
+                line-height: $line-height-18;
+                color: $color-dark-blue;
+                word-break: break-word; 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-------------------------------------------*\
+Blue copyright div bottom
+\*-------------------------------------------*/
+
+.copyright-div {
+  background: $color-dark-blue;
+
+  .copyright-text {
+    color: $color-white;
+    font-family: $font-family-Bekaert-regular;
+    font-weight: $font-weight-400;
+    font-size: $font-size-15;
+    line-height: $line-height-18;
+    padding: 10px 0 11px 0;
+
+    .terms-div-text {
+      @media(max-width:$screen-md-min) {
+        justify-content: center;
+        padding-top: 15px;
+      }
+      .middle-copyright-line {
+        fill: $color-white;
+        margin: 0 10px;
+        @media only screen and (min-width: $screen-xll-b-l-min) {
+          width: 5px;
+        }
+        @media only screen and (max-width: $screen-md-min) {
+          margin: 0 30px;
+        }
+      }
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+// 700px
+
+@media only screen and (max-width: $screen-md-min) {
+  .copyright-div {
+    .copyright-text {
+      font-size: $font-size-12;
+    }
+  }
+}

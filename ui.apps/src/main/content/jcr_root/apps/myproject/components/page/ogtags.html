@@ -1,0 +1,14 @@
+<sly data-sly-use.extmodel="com.myproject.aem.core.models.ExternalizerConfigData" />
+<sly data-sly-test="${properties.ogtagscheck=='yes'}">
+
+<meta property="og:url" content="${extmodel.externalLink}" x-cq-linkchecker="skip" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bekaert Dramix®" />
+<meta property="og:title" content="${properties.ogtitle} " />
+<meta property="og:description" content="${properties.ogdescription} " />
+<sly data-sly-test="${properties.ogImage || inheritedPageProperties.ogImage}" >
+	<meta property="og:image" content="${extmodel.domainName}${properties.ogImage ? properties.ogImage : inheritedPageProperties.ogImage}" />
+</sly>
+
+</sly>
+

@@ -1,0 +1,10 @@
+<div class="cmp-columncontrol container my-3" data-sly-use.colcontrol="com.myproject.aem.core.models.ColumnControl" data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+	<div class="row">
+		<div class="col-md-${colcontrol.columnCount} col-sm-12 column-${itemList.count}" data-sly-repeat="${colcontrol.list}">
+			<div class="column-inner">
+				<div class="column-wrapper" data-sly-resource ="${itemList.count @ resourceType='myproject/components/container'}"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !colcontrol.list}"></sly>

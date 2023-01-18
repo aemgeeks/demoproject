@@ -1,0 +1,52 @@
+/**
+ * FilePond Custom Styles
+ */
+ .filepond--drop-label {
+	color: $color-light-black;
+}
+
+.filepond--label-action {
+	text-decoration-color: $color-faded-white;
+}
+
+.filepond--panel-root {
+    border: none;
+	background-color: $color-white;
+	height: 1em;
+}
+
+.filepond--item-panel {
+	background-color: $color-white;
+}
+
+.filepond--drip-blob {
+	background-color: $color-faded-gray;
+}
+
+.filepond--root{
+    font-family: $font-family-Bekaert-regular;
+    font-size: $font-size-16;
+    font-weight: $font-weight-400;
+    line-height: $line-height-23-46;
+    .filepond--file{
+        color: $bright-cerulean;
+    }
+    .filepond--item-panel{
+        background-color: $color-white;
+        border: 1px solid $bright-cerulean;
+        border-radius: 6px;
+        &[data-filepond-item-state*='invalid']{
+            background-color: $color-red;
+            border: 1px solid $color-red;
+            border-radius: 6px;
+        }
+    }
+    .filepond--file-action-button{
+        background-color: $bright-cerulean;  
+    }
+    .filepond--file-status{
+        color: $color-red
+    }
+}
+
+

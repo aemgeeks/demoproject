@@ -1,0 +1,16 @@
+<sly data-sly-use.faq="com.myproject.aem.core.models.FAQModel" />
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+  				<sly data-sly-list="${faq.getFAQsWithoutHtmlTagss}">
+    "@type": "Question",
+    "name": "${item.faqQuestion @context='html'}",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "${item.faqAnswer @context='text'}"
+                 }}<sly data-sly-test="${!itemList.last}">,{</sly>
+
+</sly>
+                 ]
+}

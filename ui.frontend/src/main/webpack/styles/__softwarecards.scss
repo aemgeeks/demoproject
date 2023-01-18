@@ -1,0 +1,130 @@
+.cmp-software-cards-dramix {
+    .software-card-row {
+        margin-top: 60px;
+        .listing-small-div {
+            .software-card-link {
+                .small-image {
+                    @media (min-width: $screen-xll-min){
+                        height: 300px ;
+                    }
+                    @media (min-width: $screen-xl-min) and (max-width: $screen-xll-min){
+                        height: 260px
+                    }
+                    @media (min-width: $screen-md-min) and (max-width: $screen-xl-min){
+                        height: 230px;
+                    }
+                    .small-image-class {
+                        object-fit: cover;
+                        transition: all .5s ease-in-out;
+                        @media (min-width: $screen-md-min){
+                            height: -webkit-fill-available;
+                        }
+                    }
+                    .calculator-icon {
+                        width: 60px;
+                        left: 0;
+                        bottom: 0;
+                        @media (max-width: $screen-sm-min) {
+                            width: 50px;
+                        }
+                    }
+                }
+                .cmp-teaser__content {
+                    .cmp-teaser__title {
+                        font-family: $font-family-Bekaert-bold;
+                        margin: 20px 0;
+                        font-size: $font-size-20;
+                        color: $color-dark-blue;
+                        line-height: $line-height-24;
+                        font-weight: $font-weight-700;
+                    }
+                }
+
+                .cmp-teaser__description {
+                    p {
+                        color: $color-dark-gray;
+                        line-height: $line-height-146;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-15;
+                    }
+                }
+
+                .no-btn-grey {
+                    width: 100%;
+
+                    .btn {
+                        position: relative;
+                        left: -15px;
+                        display: flex;
+                        width: auto;
+                        padding-left: 0;
+                        padding-right: 0;
+                        min-height: 49px;
+
+                        .arrow-left {
+                            opacity: 0;
+                            position: relative;
+                            left: -5px;
+                            margin: auto 0;
+
+                        }
+
+                        .arrow-right {
+                            position: relative;
+                            right: 20px;
+                            margin: auto 0 auto 20px;
+                        }
+
+
+                        .cmp-button__text {
+                            font-family: $font-family-Bekaert-bold;
+                            font-weight: $font-weight-700;
+                            font-size: $font-size-15;
+                            line-height: $line-height-17;
+                            color: $color-dark-blue;
+                            margin: auto 30px auto 10px;
+                        }
+
+                     
+                        &:focus{
+                            box-shadow: none;
+                        }
+                    }
+                }
+                &:hover {
+                    .btn {
+                        padding-right: 0;
+                        transition: 1s;
+
+                        .arrow-right {
+                            right: 0;
+                            transition: 0.5s;
+                            opacity: 0;
+                        }
+
+                        .arrow-left {
+                            transform: translate(15px);
+                            transition: 0.5s;
+                            opacity: 1;
+                            right: 10px;
+
+                        }
+
+                        .cmp-button__text {
+                            transform: translate(15px);
+                            transition: 0.5s;
+
+                        }
+
+                    }
+                }
+                .teaser-horz-line{
+                    color: $color-light-gray;
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+}

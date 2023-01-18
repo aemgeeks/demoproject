@@ -1,0 +1,44 @@
+<sly data-sly-use.extmodel="com.myproject.aem.core.models.ExternalizerConfigData" />
+<sly data-sly-test="${inheritedPageProperties.jcr:language =='en'}">
+
+
+ </sly>
+
+<sly data-sly-test="${inheritedPageProperties.jcr:language =='es'}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "company®",
+  "url": "${extmodel.domainName @context = 'html'}/url",
+  "logo": "https://www.google.com.logo.jpg",
+  "sameAs": [
+    "https://www.facebook.com/company",
+    "https://twitter.com/company",
+    "https://www.youtube.com/c/company",
+    "https://www.linkedin.com/showcase/company"
+  ]
+}
+</script>
+
+<script type="application/ld+json"> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "WebSite",
+  "name": "MyProject®",
+  "alternateName": "Alt Project®",
+  "url": "${extmodel.domainName @context = 'html'}/content/"
+}
+ </script>
+ 
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bekaert Dramix®",
+  "url": "${extmodel.domainName @context = 'html'}/url",
+  "logo": "url"
+}
+</script>
+ 
+</sly>

@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'base';
+@import 'fonts';
+@import '../components/**/*.scss';
+@import '../styles/**/*.scss';
+@import './styles/*.scss';
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-utilities";
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~animate.css/animate.css';
+@import '~aos/dist/aos.css';
+@import '~filepond/dist/filepond.min.css';
+@import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
+
+// Declare the font family
+:root {
+    --bs-font-sans-serif: "Bekaert-Regular";
+    --bs-body-color: #042a4b;
+}

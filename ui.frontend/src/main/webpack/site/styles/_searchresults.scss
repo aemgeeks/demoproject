@@ -1,0 +1,380 @@
+/*-------------------------------------------------*\
+   General style sheet for the searchresults
+   
+   Table of Contents
+   If you conduct a Search on the page, type in the 
+   section below that you would like to jump to.
+
+   - searchresults Component for search results page
+      
+\*-------------------------------------------------*/
+
+/*-------------------------------------------*\
+    search results page
+ \*-------------------------------------------*/
+
+.searchresults {
+  .searchresult-numbers {
+    font-style: $font-weight-normal;
+    font-weight: $font-weight-400;
+    font-size: $font-size-15;
+    line-height: $line-height-21;
+    color: $color-dark-blue;
+    @media only screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+      border-top: 1px solid $color-regal-blue-II;
+      float: none;     
+    }
+  }
+
+  .filter_button {
+    font-style: $font-style-normal;
+    font-weight: $font-weight-700;
+    font-size: $font-size-16;
+    line-height: $line-height-17;
+    color: $color-dark-blue;
+  }
+
+  .searchcards-page-row {
+    
+    .search-empty-message{
+      text-align: center;
+      padding: 5em;
+      font-weight: $font-weight-400;
+      font-size: $font-size-16;
+      line-height: $line-height-146;
+      color: $color-dark-gray;
+    }
+    .desription-wrapper-div {
+      .acs-btn {
+        font-family: $font-family-Bekaert-bold;
+        color: $color-dark-blue;
+        border: 0px;
+        background-color: $color-white;
+        cursor: pointer;
+        transition: 3s;
+        font-weight: $font-weight-700;
+
+        .arrow-cont {
+          position: relative;
+
+          img {
+            width: 32px;
+            padding-left: 20px;
+          }
+
+          &:after {
+            content: url(#{$image-path}/button-icons/top_right_arrow.svg);
+            transform: scale(1.3);
+            position: absolute;
+            right: 6px;
+            top: -11px;
+            width: 1px;
+            height: 1px;
+          }
+        }
+      }
+
+      .cmp-teaser__content {
+        .cmp-teaser__title {
+          font-family: $font-family-Bekaert-bold;
+          margin: 30px 0;
+          font-size: $font-size-20;
+          color: $color-dark-blue;
+          line-height: $line-height-24;
+          font-weight: $font-weight-700;
+        }
+      }
+
+      .cmp-teaser__description {
+        margin: 0px 0px 30px 0px;
+
+        p {
+          margin: 0;
+          color: $color-dark-gray;
+          line-height: $line-height-146;
+          font-weight: $font-weight-400;
+          font-size: $font-size-15;
+        }
+      }
+
+      .teaser-horz-line {
+        color: $color-light-gray;
+      }
+
+      .no-btn-grey {
+        width: 100%;
+
+        .btn {
+          border: 0;
+          position: relative;
+          left: -15px;
+          width: auto;
+          padding-left: 0;
+          padding-right: 0;
+          min-height: 49px;
+
+          .arrow-left {
+            opacity: 0;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+          }
+
+          .arrow-right {
+            position: relative;
+            right: 20px;
+            margin: auto 0;
+            margin-left: 20px;
+          }
+
+          .cmp-button__text {
+            font-family: $font-family-Bekaert-bold;
+            font-weight: $font-weight-700;
+            font-size: $font-size-15;
+            line-height: $line-height-17;
+            color: $color-dark-blue;
+            margin: auto 30px auto 20px;
+          }
+        }
+
+        .btn {
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        &:hover {
+          .arrow-left {
+            opacity: 1;
+            right: 10px;
+          }
+        }
+      }
+
+      &:hover {
+        .small-image-class {
+          transform: scale(1.2);
+        }
+
+        .desription-wrapper-div {
+          .btn {
+            padding-right: 0;
+            transition: 1s;
+
+            .arrow-right {
+              right: 0;
+              transition: 0.5s;
+              opacity: 0;
+            }
+
+            .arrow-left {
+              transform: translate(15px);
+              transition: 0.5s;
+              opacity: 1;
+              right: 10px;
+            }
+
+            .cmp-button__text {
+              transform: translate(15px);
+              transition: 0.5s;
+            }
+          }
+        }
+
+        .arrow-cont {
+          &:after {
+            animation-name: arrow;
+            animation-duration: 1s;
+          }
+        }
+      }
+
+      /*-------------------------------------------*\
+                 Download button
+            \*-------------------------------------------*/
+
+      .dwn-btn {
+        font-family: $font-family-Bekaert-bold;
+        font-size: 15px;
+        color: $color-dark-blue;
+        border: 0px;
+        background-color: $color-white;
+        cursor: pointer;
+        transition: 3s;
+        font-weight: $font-weight-700;
+        text-align: left;
+
+        .arrow-cont {
+          position: relative;
+
+          img {
+            width: 35px;
+            padding-left: 20px;
+          }
+
+          &:after {
+            content: url("/etc.clientlibs/myproject/clientlibs/clientlib-site/resources/images/button-icons/arrow_blue.svg");
+            transform: scale(0.12);
+            position: absolute;
+            right: 13.8%;
+            top: 6px;
+            width: 10px;
+            height: 2px;
+
+            @media (max-width: $screen-md-min) {
+              right: 3.6px;
+              top: 6px;
+            }
+          }
+        }
+
+        &:hover {
+          .arrow-cont {
+            &:after {
+              animation-name: arrow;
+              animation-duration: 1s;
+            }
+          }
+        }
+
+        @media (max-width: $screen-md-min) {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .pagination-row {
+      border-top: 1px solid $color-regal-blue-II;
+
+      .pagination-arrow {
+        width: 7.5px;
+      }
+
+      .left-arrow-pagination {
+        rotate: 180deg;
+      }
+
+      .right-arrow-pagination {
+        transform: scaleY(-1);
+      }
+
+      .results-pagination {
+        ul {
+          background: $color-white;
+          padding: 8px;
+
+          li {
+            color: $color-regal-blue-II;
+            list-style: none;
+            font-size: $font-size-16;
+            font-weight: $font-weight-700;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s ease;
+
+            &:first-child {
+              &:hover {
+                color: $color-regal-blue;
+              }
+            }
+
+            &:last-child {
+              &:hover {
+                color: $color-regal-blue;
+              }
+            }
+          }
+
+          li {
+            &.numb {
+              list-style: none;
+              height: 45px;
+              width: 45px;
+              border-top: 1px solid $color-regal-blue-II;
+              border-bottom: 1px solid $color-regal-blue-II;
+              line-height: 45px;
+
+              &:first-child {
+                border-left: 1px solid $color-regal-blue-II;
+              }
+
+              &:last-child {
+                border-right: 1px solid $color-regal-blue-II;
+              }
+
+              &:hover {
+                color: $color-regal-blue;
+              }
+            }
+
+            &.dots {
+              font-size: 22px;
+              cursor: default;
+              border-top: 1px solid $color-regal-blue-II;
+              border-bottom: 1px solid $color-regal-blue-II;
+            }
+
+            &.btn {
+              border-radius: 0;
+            }
+
+            &.active {
+              color: $color-regal-blue;
+            }
+          }
+
+          .prev {
+            border-right: 1px solid $color-regal-blue-II;
+            border-top: 0;
+            border-bottom: 0;
+            border-left: 0;
+          }
+
+          .next {
+            border-left: 1px solid $color-regal-blue-II;
+            border-top: 0;
+            border-bottom: 0;
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    mark {
+      color: $color-sky-blue;
+      padding: 0;
+      background-color: $color-white;
+    }
+
+    strong {
+      color: $color-sky-blue;
+      padding: 0;
+      background-color: $color-white;
+      font-weight: 400;
+    }
+
+    .software-card-link {
+      cursor: pointer;
+
+      .small-image {
+        overflow: hidden;
+        position: relative;
+
+        .small-image-class {
+          height: 263px;
+          object-fit: cover;
+          transition: all 0.5s ease-in-out;
+          width: 100%;
+        }
+
+        .calculator-icon {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          width: 60px;
+        }
+      }
+    }
+  }
+}
